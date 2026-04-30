@@ -1,17 +1,19 @@
-import { fileURLToPath, URL } from 'node:url'
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
+// GitHub Pages: set VITE_BASE=/repo-name/ in CI. Cloudflare Pages custom domain uses "/".
 export default defineConfig({
+  base: process.env.VITE_BASE || '/',
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': path.resolve(process.cwd(), 'src'),
     },
   },
   server: {
     fs: {
-      allow: [fileURLToPath(new URL('..', import.meta.url))],
+      allow: [path.resolve(process.cwd(), '..')],
     },
   },
 })
