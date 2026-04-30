@@ -1,0 +1,1 @@
+import{E as e,h as t,n,t as r,u as i,w as a,y as o}from"./index-CKII5XnT.js";import{t as s}from"./LegacyPageShell-1RlV-rJK.js";var c={__name:`HomeView`,setup(c){let l=r(`home.html`);return(r,c)=>(o(),i(s,{"full-bleed":``},{default:a(()=>[t(n,{html:e(l)},null,8,[`html`])]),_:1}))}};export{c as default};

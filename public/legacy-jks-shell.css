@@ -1,0 +1,149 @@
+/* SPA shell: let Elementor full-width sections and footer behave like the static site */
+
+#app.jks-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.jks-wapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.jks-main {
+  flex: 1 0 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+.footer-layout {
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 0;
+}
+
+.static-page-content img {
+  height: auto;
+  max-width: 100%;
+}
+
+/*
+ * Theme: `.elementor-page #pxl-main { padding: 0 }` removes the default `#pxl-main { padding: 120px 0 }`.
+ * Use !important so vertical spacing always wins over the shorthand; skip home (fullBleed).
+ */
+body.elementor-page #pxl-main.legacy-page-shell:not(.legacy-page-shell--full-bleed) {
+  padding-top: clamp(3rem, 5vw + 2rem, 6.5rem) !important;
+  padding-bottom: clamp(2.5rem, 5vw, 5rem) !important;
+}
+
+/*
+ * About page: first section uses margin-top: -241px to tuck under the legacy Elementor header.
+ * Vue uses a shorter custom header — cancel the pull-up so the banner clears the nav.
+ */
+body.elementor-page .legacy-page-shell .elementor-222 .elementor-element.elementor-element-ffdba3d {
+  margin-top: 0 !important;
+}
+
+/*
+ * No-sidebar shell: theme only adds `#pxl-main > .elementor-container { padding: 0 15px }` below 1024px,
+ * so About / Contact / legal pages sit flush on desktop. Pad at all widths; skip on home (fullBleed).
+ */
+body.elementor-page .legacy-page-shell:not(.legacy-page-shell--full-bleed) > .elementor-container {
+  box-sizing: border-box;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 1200px) {
+  body.elementor-page .legacy-page-shell:not(.legacy-page-shell--full-bleed) > .elementor-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* Plain block-style pages (privacy, terms, …): comfortable line length; skip Elementor pages */
+body.elementor-page
+  .legacy-page-shell:not(.legacy-page-shell--full-bleed)
+  #pxl-content-main
+  article:not(:has(.elementor))
+  .pxl-entry-content {
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * Theme expects jQuery + carousel.js / WOW / Elementor frontend.
+ * Without them, sliders stay opacity:0, .wow stays visibility:hidden, etc.
+ */
+body.jks-legacy-site:not(.elementor-editor-active) .pxl-element-slider,
+body.jks-legacy-site .pxl-element-slider {
+  opacity: 1 !important;
+}
+
+/* animate.min.css: .elementor-widget-container .wow { visibility: hidden } until WOW adds .animated */
+body.jks-legacy-site .wow {
+  visibility: visible !important;
+}
+
+/*
+ * Elementor frontend: .elementor-invisible { visibility: hidden } for entrance animations.
+ * Without Elementor JS removing the class, whole sections/widgets stay invisible.
+ */
+body.jks-legacy-site .elementor-invisible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  filter: none !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+/* Elementor motion fallback (some widgets use this instead of elementor-invisible) */
+body.jks-legacy-site .elementor-visibility-hidden {
+  visibility: visible !important;
+}
+
+/*
+ * style.css: .pxl-swiper-boxshadow .pxl-swiper-slide:not(.swiper-slide-visible) { opacity: 0 }
+ * Swiper adds .swiper-slide-visible; without JS every slide stays invisible (testimonials, blog carousel).
+ * Swiper 5 uses .swiper-container-initialized on the container; newer Swiper uses .swiper-initialized.
+ */
+body.jks-legacy-site
+  .pxl-swiper-sliders.pxl-swiper-boxshadow:not(:has(.swiper-container-initialized)):not(:has(.swiper-initialized))
+  .pxl-swiper-slide {
+  opacity: 1 !important;
+}
+
+/* Hero fade slider: show first slide only until Swiper runs */
+body.jks-legacy-site
+  .pxl-element-slider.pxl-swiper-sliders1:not(:has(.swiper-container-initialized)):not(:has(.swiper-initialized))
+  .pxl-swiper-slide {
+  display: none !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+body.jks-legacy-site
+  .pxl-element-slider.pxl-swiper-sliders1:not(:has(.swiper-container-initialized)):not(:has(.swiper-initialized))
+  .pxl-swiper-slide:first-child {
+  display: block !important;
+}
+
+/* Multi-slide carousels: wrap slides so images stay visible without Swiper width logic */
+body.jks-legacy-site
+  .pxl-swiper-sliders:not(.pxl-element-slider):not(:has(.swiper-container-initialized)):not(:has(.swiper-initialized))
+  .pxl-swiper-wrapper {
+  flex-wrap: wrap !important;
+  height: auto !important;
+}
+body.jks-legacy-site
+  .pxl-swiper-sliders:not(.pxl-element-slider):not(:has(.swiper-container-initialized)):not(:has(.swiper-initialized))
+  .pxl-swiper-slide {
+  width: auto !important;
+  flex: 1 1 280px !important;
+  max-width: 100% !important;
+  height: auto !important;
+}

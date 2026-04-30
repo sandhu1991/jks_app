@@ -1,0 +1,666 @@
+/* Ported from jks_static index.html #wp-custom-css — omits rules that break SPA forms/layouts site-wide */
+
+.pxl-author-info.widget {
+  display: none;
+}
+.elementor-126 .elementor-element.elementor-element-2b679ef > .elementor-container {
+  display: none;
+}
+.pxl--post-footer {
+  display: none;
+}
+.pxl-post--author-info {
+  display: none;
+}
+.comment-reply-title {
+  display: none;
+}
+.comments-area .comment-respond .logged-in-as {
+  display: none;
+}
+.comment-form .form-submit {
+  display: none;
+}
+.single-post .pxl-item--date {
+  display: none;
+}
+.pxl-service-grid-layout4 .pxl-grid-inner .pxl-grid-item .pxl-item--inner .wrap-right .pxl-item--price {
+  display: none;
+}
+.single-post .pxl-item-title {
+  font-size: 60px;
+}
+.btn.btn-full-width-icon-absolute {
+  pointer-events: none;
+}
+.pxl-post-carousel2 .pxl-carousel-inner .pxl-swiper-container .pxl-swiper-wrapper .pxl-swiper-slide .pxl-item--inner .pxl-item--holder .pxl-item--meta .pxl-item--date {
+  display: none;
+}
+
+.forminator-ui#forminator-module-4879.forminator-design--default .forminator-input,
+.forminator-ui#forminator-module-4879.forminator-design--default .forminator-input input,
+.forminator-ui#forminator-module-4879.forminator-design--default .forminator-iti-input .iti__selected-dial-code {
+  border: 1px solid #fff;
+  height: 60px;
+  border-radius: 10px;
+}
+.forminator-ui#forminator-module-4879.forminator-design--default .forminator-textarea {
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+/* Home: full-width two-video fade carousel (replaces single pxl_video_player block) */
+.elementor-217 .elementor-element-bb7c4b7 .jks-home-video-carousel .pxl-swiper-slide .pxl-video--inner {
+  position: relative;
+}
+
+.elementor-217 .elementor-element-bb7c4b7 .jks-home-video-carousel .pxl-swiper-slide .pxl-video--holder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}
+
+/* Footer: Contact column — same spacing/typography as Services (see footer-elementor 3b8974f / 411034a) */
+#pxl-footer-elementor .jks-footer-contact > .elementor-element-populated {
+  min-width: 0;
+}
+
+#pxl-footer-elementor .jks-footer-contact .elementor-widget-wrap {
+  display: block;
+}
+
+#pxl-footer-elementor .jks-footer-contact-panel {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+#pxl-footer-elementor .jks-footer-contact-panel > .elementor-element {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+#pxl-footer-elementor .jks-footer-contact-panel .elementor-widget-container {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#pxl-footer-elementor .jks-footer-contact-panel .elementor-element-jksfc-h > .elementor-widget-container {
+  margin: 5px 0 7px;
+}
+
+#pxl-footer-elementor .jks-footer-contact-panel .elementor-element-jksfc-h .pxl-item--title {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#pxl-footer-elementor .jks-footer-contact-panel .px-title--divider4:before,
+#pxl-footer-elementor .jks-footer-contact-panel .px-title--divider4:after,
+#pxl-footer-elementor .jks-footer-contact-panel .px-title--divider4 span {
+  background-color: #ffffff !important;
+}
+
+#pxl-footer-elementor .jks-footer-contact .elementor-element-7ec2392 > .elementor-widget-container,
+#pxl-footer-elementor .jks-footer-contact .elementor-element-2018fa8 > .elementor-widget-container {
+  border: none !important;
+  margin: 0 !important;
+  padding: 0.25rem 0 !important;
+}
+
+#pxl-footer-elementor .jks-footer-contact .pxl-contact-info4 {
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  width: 100%;
+  max-width: 100%;
+}
+
+#pxl-footer-elementor .jks-footer-contact .pxl-contact-info4 .pxl-item--inner {
+  border: none !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  width: 100%;
+  max-width: 100%;
+  gap: 0.5rem;
+  box-sizing: border-box;
+}
+
+#pxl-footer-elementor .jks-footer-contact .pxl-contact-info4 .pxl-item--meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: left;
+}
+
+#pxl-footer-elementor .jks-footer-contact .pxl-contact-info4 .pxl-item--title {
+  color: #e7e7e7 !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+#pxl-footer-elementor .jks-footer-contact .pxl-contact-info4 .pxl-item--title:hover {
+  color: #ffffff !important;
+}
+
+/* Phone row: keep number on one line in the Contact column */
+#pxl-footer-elementor .jks-footer-contact .elementor-element-2018fa8 .pxl-contact-info4 .pxl-item--title {
+  white-space: nowrap;
+}
+
+#pxl-footer-elementor .jks-footer-contact .elementor-element-2018fa8 .pxl-item--meta {
+  min-width: min-content;
+}
+
+#pxl-footer-elementor .jks-footer-contact .pxl-item--icon i {
+  color: #e7e7e7 !important;
+}
+
+#pxl-footer-elementor .jks-footer-contact .elementor-element-32486db > .elementor-widget-container {
+  margin-top: 6px;
+}
+
+#pxl-footer-elementor .jks-footer-contact .elementor-element-32486db .pxl-icon-list.pxl-icon1 {
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+#pxl-footer-elementor .jks-footer-contact .elementor-element-32486db .pxl-icon1.style-box2 a {
+  margin: 0 6px 0 0 !important;
+}
+
+/* Home hero: city/water stock — anchor top so cover crops lower water; Ken Burns disabled on flagged slides */
+.elementor-217 .elementor-element-8faa403 .pxl-slider--image.bg-image {
+  background-size: cover;
+  background-position: center top;
+}
+
+.elementor-217 .elementor-element-8faa403 .pxl-slider--mainimage.jks-hero-slide-toronto,
+.elementor-217 .elementor-element-8faa403 .pxl-slider--mainimage.jks-hero-slide-vancouver,
+.elementor-217 .elementor-element-8faa403 .pxl-slider--mainimage.jks-hero-slide-canada {
+  animation: none !important;
+  transform: none !important;
+}
+
+/* Hero slides: slogan (h2) → logo + JKS Immigration → optional h3 → Contact Us */
+.elementor-217 .elementor-element-8faa403 .jks-hero-heading--slogan-only .pxl-heading--inner {
+  padding-top: 0;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-slogan {
+  margin: 0 0 0.35rem;
+  max-width: 34rem;
+  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+  line-height: 1.25;
+  font-weight: 700;
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-brand-widget > .elementor-widget-container {
+  margin: 0.5rem 0 0.35rem;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1rem;
+  padding: 0.65rem 0.85rem 0.65rem 0.65rem;
+  max-width: min(100%, 26rem);
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.06) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-brand__logo {
+  display: block;
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: contain;
+  border-radius: 12px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #fff 0%, #eef2f8 100%);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.18),
+    0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-brand__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-brand__name {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: clamp(1.15rem, 2.1vw, 1.45rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  line-height: 1.15;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-brand__line {
+  display: block;
+  width: 3rem;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #da291c 0%, rgba(218, 41, 28, 0.35) 100%);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-subline > .jks-hero-slogan-sub {
+  margin: 0 0 0.25rem;
+  max-width: 32rem;
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-subline {
+  margin-bottom: 0.35rem;
+}
+
+/* Shared: logo + Contact Us pill (slides 1–3) */
+.elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.65rem 0;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 0.55rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0.09) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding-right: 0.85rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__btn {
+  padding-left: 0.85rem;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__logo {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  border-radius: 10px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, #fff 0%, #eef2f8 100%);
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__name {
+  font-family: 'Rubik', system-ui, sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.08rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  line-height: 1.15;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__btn .pxl-button {
+  margin: 0;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__btn .btn {
+  white-space: nowrap;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-slide-cta-widget--align-start > .elementor-widget-container {
+  margin: 0.5rem 0 0.35rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.elementor-217 .elementor-element-8faa403 .jks-hero-slide-cta-widget--align-start .pxl-text-editor {
+  margin: 0;
+}
+
+@media (max-width: 520px) {
+  .elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo {
+    flex-direction: column;
+    border-radius: 18px;
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+  }
+
+  .elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__brand {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+    padding-bottom: 0.65rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .elementor-217 .elementor-element-8faa403 .jks-hero-cta-combo__btn {
+    padding-left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Toronto hero: stable selector (not :first-child — Swiper loop clones slides) */
+.elementor-217 .elementor-element.elementor-element-8faa403 .pxl-element-slider .pxl-slider--content.jks-hero-slide1-content {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slide1-elementor {
+  width: 100%;
+  max-width: min(100%, 40rem);
+  margin: 0 auto;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slide1-section > .elementor-container {
+  justify-content: center;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slide1-widgets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slide1-col > .elementor-widget-wrap {
+  justify-content: center;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-heading--slogan-only .pxl-heading--inner {
+  text-align: center;
+}
+
+/* Exactly two lines: each line does not re-wrap into extra lines */
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slogan--slide1 {
+  max-width: min(96vw, 38rem);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.2;
+  font-size: clamp(1.2rem, 2.8vw, 2rem);
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slogan--slide1 .jks-hero-slogan__line {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Second slogan line: nudge left to align visually with first line */
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slogan--slide1 .jks-hero-slogan__line--2 {
+  margin-left: -78px;
+}
+
+@media (max-width: 520px) {
+  .elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slogan--slide1 .jks-hero-slogan__line--2 {
+    margin-left: clamp(-2.5rem, -12vw, -1rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slogan--slide1 .jks-hero-slogan__line {
+    white-space: normal;
+  }
+
+  .elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slogan--slide1 .jks-hero-slogan__line--2 {
+    margin-left: 0;
+  }
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slide1-cta-widget > .elementor-widget-container {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slide1-cta-widget .pxl-text-editor {
+  margin: 0;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-cta-combo {
+  justify-content: center;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='toronto'] .jks-hero-slide1-contact-btn {
+  white-space: nowrap;
+}
+
+/* Hero slide 2 (Vancouver): light photo — darken so white headline/CTA read clearly */
+.elementor-217 .elementor-element-8faa403 [data-jks-hero-slide='vancouver'] .pxl-slider--mainimage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(10, 12, 18, 0.4) 0%, rgba(6, 8, 12, 0.55) 100%);
+}
+
+/* Footer: deeper black-navy (override bright cyan/blue bar + bottom strip) */
+#pxl-footer-elementor .elementor.elementor-78 .elementor-element.elementor-element-ac85124:not(.elementor-motion-effects-element-type-background),
+#pxl-footer-elementor
+  .elementor.elementor-78
+  .elementor-element.elementor-element-ac85124
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-color: #0a0d12 !important;
+  background-image: linear-gradient(90deg, #141920 0%, #080a0f 100%) !important;
+}
+
+#pxl-footer-elementor .elementor.elementor-78 .elementor-element.elementor-element-af19702:not(.elementor-motion-effects-element-type-background),
+#pxl-footer-elementor
+  .elementor.elementor-78
+  .elementor-element.elementor-element-af19702
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-color: #05070b !important;
+}
+
+/* Express Entry (#pxl-post-4466): keep default white layout; red instead of theme blue (titles, search, social, hovers) */
+#pxl-post-4466 .pxl-item-title {
+  color: #da291c !important;
+}
+
+#pxl-post-4466 .pxl-item--content .wp-block-heading {
+  color: #da291c;
+}
+
+#pxl-main:has(#pxl-post-4466) .pxl-sidebar-area .widget-title {
+  color: #da291c;
+}
+
+#pxl-main:has(#pxl-post-4466) .pxl-sidebar-area .widget-title::before {
+  background-color: #da291c !important;
+}
+
+#pxl-main:has(#pxl-post-4466) .search-form .search-submit {
+  background: #da291c !important;
+  box-shadow: 0 10px 20px rgba(218, 41, 28, 0.18) !important;
+}
+
+#pxl-main:has(#pxl-post-4466) .search-form .search-submit:hover {
+  background-color: #b51f18 !important;
+  color: #fff;
+  box-shadow: none;
+}
+
+#pxl-main:has(#pxl-post-4466) .search-form .search-field:focus,
+#pxl-main:has(#pxl-post-4466) .search-form .search-field:active,
+#pxl-main:has(#pxl-post-4466) .search-form .search-field:hover {
+  border-color: #da291c;
+}
+
+#pxl-main:has(#pxl-post-4466) .widget_categories ul li > a:hover,
+#pxl-main:has(#pxl-post-4466) .widget_categories ul li.current-menu-item > a,
+#pxl-main:has(#pxl-post-4466) .widget_categories ul li.current-cat > a {
+  color: #da291c !important;
+}
+
+#pxl-main:has(#pxl-post-4466) .pxl-author-info .author-social a {
+  color: #da291c;
+  background-color: rgba(218, 41, 28, 0.1);
+}
+
+#pxl-main:has(#pxl-post-4466) .pxl-author-info .author-social a:hover {
+  background-color: #da291c;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(218, 41, 28, 0.25);
+}
+
+/* Contact — “Drop Us A Line” inner card: neutral stone (replaces pink #ffeeef + blue-tint shadow) */
+.elementor-60 .elementor-element.elementor-element-43d9931:not(.elementor-motion-effects-element-type-background),
+.elementor-60
+  .elementor-element.elementor-element-43d9931
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-color: #f3f2f0 !important;
+  background-image: linear-gradient(165deg, #fafaf9 0%, #ecebe9 55%, #e5e4e1 100%) !important;
+}
+
+.elementor-60 .elementor-element.elementor-element-43d9931 {
+  box-shadow: 0 14px 44px rgba(26, 26, 26, 0.09) !important;
+}
+
+.elementor-60 .elementor-element.elementor-element-c383065 .pxl-heading .pxl-item--title {
+  color: #1a1a1a;
+}
+
+.elementor-60 .elementor-element.elementor-element-c383065 .pxl-heading .pxl-item--subtitle,
+.elementor-60 .elementor-element.elementor-element-c383065 .pxl-heading .pxl-item--subtext {
+  color: #4a4a4a;
+}
+
+#jks-contact-form-mount {
+  width: 100%;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.elementor-60 .jks-contact-form-widget > .elementor-widget-container {
+  margin-top: 0;
+}
+
+/* About page (.elementor-222): IRCC / site palette — remove leftover blues from exported Elementor CSS */
+.elementor.elementor-222 {
+  --e-global-color-primary: #da291c;
+  --e-global-color-secondary: #1a1a1a;
+  --e-global-color-accent: #1a1a1a;
+  --e-global-color-a02d014: #b01020;
+  --e-global-color-a47f896: #da291c;
+  --e-global-color-2d4beed: #f5d0d3;
+  --e-global-color-cb5ad96: #f8f1f0;
+}
+
+.elementor-222 .elementor-element.elementor-element-cd73363 .pxl-heading .pxl-item--subtitle,
+.elementor-222 .elementor-element.elementor-element-799399e .pxl-heading .pxl-item--subtitle,
+.elementor-222 .elementor-element.elementor-element-4aba13e .pxl-heading .pxl-item--subtitle,
+.elementor-222 .elementor-element.elementor-element-6c7b17b .pxl-heading .pxl-item--subtitle {
+  color: #da291c !important;
+}
+
+.elementor-222 .pxl-heading .pxl-item--subtitle.px-sub-title-divider1 .pxl-item--subdivider {
+  background-color: rgba(218, 41, 28, 0.18) !important;
+}
+
+.elementor-222 .pxl-heading .px-title--divider1 span,
+.elementor-222 .pxl-heading .px-title--divider1:before,
+.elementor-222 .pxl-heading .px-title--divider1:after {
+  background-color: #da291c !important;
+}
+
+.elementor-222 .elementor-element.elementor-element-ffdba3d:not(.elementor-motion-effects-element-type-background),
+.elementor-222
+  .elementor-element.elementor-element-ffdba3d
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-color: #1a1a1a !important;
+  background-image: linear-gradient(92deg, #242424 0%, #1a1a1a 45%, #121212 100%) !important;
+}
+
+.elementor-222 .elementor-element.elementor-element-9fcfa50:not(.elementor-motion-effects-element-type-background),
+.elementor-222
+  .elementor-element.elementor-element-9fcfa50
+  > .elementor-motion-effects-container
+  > .elementor-motion-effects-layer {
+  background-color: #f6f4f3 !important;
+  background-image: none !important;
+}
+
+.elementor-222 .pxl-icon-box2 .pxl-item--icon i {
+  color: #da291c !important;
+  -webkit-text-fill-color: #da291c !important;
+  background: none !important;
+  background-image: none !important;
+  background-clip: border-box !important;
+  -webkit-background-clip: border-box !important;
+}
+
+.elementor-222 .pxl-list1 .pxl-item--icon {
+  color: #da291c !important;
+}
+
+.elementor-222 .elementor-element.elementor-element-9be1503 .btn {
+  color: #da291c !important;
+  border-color: #da291c !important;
+}
+
+.elementor-222 .elementor-element.elementor-element-9be1503 .btn:hover {
+  background: #da291c !important;
+  color: #fff !important;
+  border-color: #da291c !important;
+}
+
+.elementor-222 .pxl-contact-info1 .pxl-item--icon {
+  color: #da291c !important;
+}
+
+.elementor-222 .pxl-client-review3 .pxl-item--icon {
+  color: #da291c !important;
+}
