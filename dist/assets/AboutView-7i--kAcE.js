@@ -1,0 +1,1 @@
+import{E as e,h as t,n,t as r,u as i,w as a,y as o}from"./index-Dql_YNlA.js";import{t as s}from"./LegacyPageShell-BX_2Kcx6.js";var c={__name:`AboutView`,setup(c){let l=r(`about.html`);return(r,c)=>(o(),i(s,null,{default:a(()=>[t(n,{html:e(l)},null,8,[`html`])]),_:1}))}};export{c as default};
