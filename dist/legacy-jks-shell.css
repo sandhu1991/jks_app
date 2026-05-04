@@ -31,7 +31,7 @@
 }
 
 /*
- * Theme: `.elementor-page #pxl-main { padding: 0 }` removes the default `#pxl-main { padding: 120px 0 }`.
+ * Theme: `.elementor-page #pxl-main { padding: 0 }` overrides base `#pxl-main { padding: 30px 0 }`.
  * Use !important so vertical spacing always wins over the shorthand; skip home (fullBleed).
  */
 body.elementor-page #pxl-main.legacy-page-shell:not(.legacy-page-shell--full-bleed) {
@@ -146,4 +146,27 @@ body.jks-legacy-site
   flex: 1 1 280px !important;
   max-width: 100% !important;
   height: auto !important;
+}
+
+/*
+ * Home only (`LegacyPageShell` + `fullBleed`): theme adds horizontal padding on
+ * `#pxl-main > .elementor-container` and `#pxl-content-area.col-12`, which leaves
+ * white gutters beside full-width hero/sections on phones.
+ */
+body.elementor-page #pxl-main.legacy-page-shell--full-bleed > .elementor-container {
+  box-sizing: border-box;
+  max-width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.elementor-page #pxl-main.legacy-page-shell--full-bleed #pxl-content-area.col-12 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.elementor-page #pxl-main.legacy-page-shell--full-bleed .row.pxl-content-wrap {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  --bs-gutter-x: 0;
 }

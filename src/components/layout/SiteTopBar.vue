@@ -7,7 +7,7 @@ defineProps({
 
 defineEmits(['toggle-nav'])
 
-const logoSrc = '/images/wp-content__uploads__2023__11__WhatsApp-Image-2025-06-14-at-6.37.54-PM.jpeg'
+const logoSrc = '/images/jks-brand-mark-header.png'
 </script>
 
 <template>
@@ -53,8 +53,8 @@ const logoSrc = '/images/wp-content__uploads__2023__11__WhatsApp-Image-2025-06-1
                   <RouterLink to="/">
                     <img
                       fetchpriority="high"
-                      width="500"
-                      height="500"
+                      width="144"
+                      height="56"
                       :src="logoSrc"
                       class="attachment-full"
                       alt="JKS Immigration"
@@ -183,7 +183,8 @@ const logoSrc = '/images/wp-content__uploads__2023__11__WhatsApp-Image-2025-06-1
   display: block;
   width: auto;
   height: auto;
-  max-height: 144px !important;
+  max-height: 48px;
+  max-width: min(200px, 52vw);
   object-fit: contain;
 }
 /* Match nav band width and center; cancel stretched-section edge bleed */
@@ -200,11 +201,29 @@ const logoSrc = '/images/wp-content__uploads__2023__11__WhatsApp-Image-2025-06-1
   width: 100%;
   margin-left: auto !important;
   margin-right: auto !important;
-  padding-left: 1.25rem;
+  padding-left: max(0.75rem, env(safe-area-inset-left, 0px));
   padding-right: 1.25rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+/* Flush logo to the left: drop Elementor column/widget width hacks + left padding */
+.jks-site-topbar :deep(.elementor-element.elementor-element-d8844c6 > .elementor-element-populated) {
+  padding-left: 0 !important;
+  padding-right: 0.75rem;
+}
+.jks-site-topbar :deep(.elementor-element.elementor-element-3d9edc4) {
+  width: auto !important;
+  max-width: none !important;
+  --container-widget-width: auto;
+  --container-widget-flex-grow: 0;
+}
+.jks-site-topbar :deep(.elementor-element.elementor-element-3d9edc4 > .elementor-widget-container) {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.jks-site-topbar :deep(.elementor-element.elementor-element-3d9edc4 .pxl-logo a) {
+  margin-left: 0;
 }
 .jks-site-topbar :deep(.elementor-element.elementor-element-d8844c6 > .elementor-widget-wrap) {
   justify-content: flex-start;
@@ -320,6 +339,7 @@ const logoSrc = '/images/wp-content__uploads__2023__11__WhatsApp-Image-2025-06-1
     min-height: 3.25rem;
     padding-top: 0.25rem;
     padding-bottom: 0.25rem;
+    padding-left: max(0.5rem, env(safe-area-inset-left, 0px));
     padding-right: 3.75rem;
     gap: 0;
   }
@@ -336,7 +356,8 @@ const logoSrc = '/images/wp-content__uploads__2023__11__WhatsApp-Image-2025-06-1
   }
 
   .jks-site-topbar :deep(.pxl-logo img) {
-    max-height: 88px !important;
+    max-height: 40px;
+    max-width: min(168px, 48vw);
   }
 }
 </style>
