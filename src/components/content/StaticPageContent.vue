@@ -14,7 +14,7 @@ const serviceTopicPath = /^\/(immigration|visas|other)\/[\w-]+\/?$/
 const serviceHubPath = /^\/(immigration|visas|other)\/?$/
 
 function isInternalPath(pathname) {
-  if (pathname === '/' || pathname === '/about' || pathname === '/contact' || pathname === '/faq') return true
+  if (pathname === '/' || pathname === '/about' || pathname === '/contact' || pathname === '/book' || pathname === '/faq') return true
   if (pathname === '/legal/terms' || pathname === '/legal/privacy' || pathname === '/legal/cookies') return true
   if (serviceHubPath.test(pathname)) return true
   return serviceTopicPath.test(pathname)

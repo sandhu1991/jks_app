@@ -15,6 +15,7 @@ export const serviceLabels = {
   'other-services': {
     'pr-card': 'PR Card & Renewal',
     'canadian-citizenship': 'Canadian Citizenship',
+    'visitor-record-extension': 'Visitor Record Extension',
     'study-work-permit-extension': 'Study–Work Permit Extensions',
   },
 }

@@ -1,13 +1,17 @@
 <script setup>
-import StaticPageContent from '@/components/content/StaticPageContent.vue'
-import LegacyPageShell from '@/components/layout/LegacyPageShell.vue'
-import { getStaticPageHtml } from '@/content/staticPages.js'
-
-const html = getStaticPageHtml('home.html')
+import HeroSection from '@/components/home/HeroSection.vue'
+import TrustStats from '@/components/home/TrustStats.vue'
+import ServicesGrid from '@/components/home/ServicesGrid.vue'
+import WhyChooseSection from '@/components/home/WhyChooseSection.vue'
+import ReviewsSection from '@/components/home/ReviewsSection.vue'
 </script>
 
 <template>
-  <LegacyPageShell full-bleed>
-    <StaticPageContent :html="html" />
-  </LegacyPageShell>
+  <div class="jks-modern-page">
+    <HeroSection />
+    <TrustStats />
+    <ServicesGrid />
+    <WhyChooseSection />
+    <ReviewsSection />
+  </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 import Header from '@/components/layout/Header.vue'
-import Footer from '@/components/layout/Footer.vue'
+import AppFooter from '@/components/layout/AppFooter.vue'
 </script>
 
 <template>
@@ -9,7 +9,7 @@ import Footer from '@/components/layout/Footer.vue'
     <main id="main" class="jks-main">
       <router-view />
     </main>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 

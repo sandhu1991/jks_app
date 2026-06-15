@@ -3,8 +3,10 @@ import { computed, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
 import StaticPageContent from '@/components/content/StaticPageContent.vue'
 import LegacyPageShell from '@/components/layout/LegacyPageShell.vue'
+import ServiceTopicPage from '@/components/services/ServiceTopicPage.vue'
 import { getStaticPageHtml } from '@/content/staticPages.js'
 import { serviceLabels } from '@/config/serviceLabels.js'
+import { getServiceTopic, serviceHubs } from '@/config/serviceTopics.js'
 
 const route = useRoute()
 
@@ -15,6 +17,10 @@ const title = computed(() => {
   const map = serviceLabels[category.value]
   return map?.[slug.value] || 'Service'
 })
+
+const hub = computed(() => serviceHubs[category.value] ?? null)
+
+const topic = computed(() => getServiceTopic(category.value, slug.value))
 
 const fileName = computed(() => {
   const c = category.value
@@ -33,7 +39,13 @@ watchEffect(() => {
 </script>
 
 <template>
-  <LegacyPageShell v-if="html" variant="sidebar-right">
+  <ServiceTopicPage
+    v-if="topic && hub"
+    :hub="hub"
+    :title="title"
+    :topic="topic"
+  />
+  <LegacyPageShell v-else-if="html" variant="sidebar-right">
     <StaticPageContent :html="html" />
   </LegacyPageShell>
   <article v-else class="page">

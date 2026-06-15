@@ -109,7 +109,7 @@ const logoSrc = '/images/jks-brand-mark-header.png'
                       <i aria-hidden="true" class="fa-regular fa-clock"></i>
                     </div>
                     <div class="pxl-item--holder">
-                      <h5 class="pxl-item--title el-empty">Mon – Fri 10am – 6pm</h5>
+                      <h5 class="pxl-item--title el-empty">Mon – Fri 9am – 6pm</h5>
                       <span class="pxl-item--description el-empty">Opening hours</span>
                     </div>
                   </div>

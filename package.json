@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "deploy": "npm run build && wrangler deploy",
     "extract-static": "node scripts/extract-static-pages.mjs && node scripts/build-legacy-css-bundle.mjs"
   },
   "dependencies": {
@@ -16,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "wrangler": "^4.14.0"
   }
 }

@@ -51,7 +51,7 @@
               <router-link to="/immigration">Immigrate<span class="pxl-count pxl-right">4</span></router-link>
             </li>
             <li class="cat-item cat-item-94">
-              <router-link to="/other">Other<span class="pxl-count pxl-right">3</span></router-link>
+              <router-link to="/other">Other<span class="pxl-count pxl-right">4</span></router-link>
             </li>
             <li class="cat-item cat-item-93">
               <router-link to="/visas">Visa<span class="pxl-count pxl-right">4</span></router-link>

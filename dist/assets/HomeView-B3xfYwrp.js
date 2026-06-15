@@ -1,1 +1,0 @@
-import{E as e,h as t,n,t as r,u as i,w as a,y as o}from"./index-Dql_YNlA.js";import{t as s}from"./LegacyPageShell-BX_2Kcx6.js";var c={__name:`HomeView`,setup(c){let l=r(`home.html`);return(r,c)=>(o(),i(s,{"full-bleed":``},{default:a(()=>[t(n,{html:e(l)},null,8,[`html`])]),_:1}))}};export{c as default};

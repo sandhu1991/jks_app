@@ -25,6 +25,12 @@ const routes = [
         meta: { title: 'Contact Us — JKS Immigration' },
       },
       {
+        path: 'book',
+        name: 'book',
+        component: () => import('@/views/BookView.vue'),
+        meta: { title: 'Book a Consultation — JKS Immigration' },
+      },
+      {
         path: 'services/immigration/:slug',
         redirect: (to) => ({ path: `/immigration/${to.params.slug}`, query: to.query, hash: to.hash }),
       },
@@ -38,17 +44,14 @@ const routes = [
       },
       {
         path: 'services',
-        redirect: (to) => {
-          const h = to.hash || ''
-          if (h === '#visas') return { path: '/visas' }
-          if (h === '#other-services') return { path: '/other' }
-          return { path: '/immigration' }
-        },
+        name: 'services',
+        component: () => import('@/views/ServicesView.vue'),
+        meta: { title: 'Services — JKS Immigration' },
       },
       {
         path: 'immigration',
         name: 'immigration-hub',
-        component: () => import('@/views/ServicesIndexView.vue'),
+        component: () => import('@/views/ServicesView.vue'),
         meta: { title: 'Immigrate — JKS Immigration', servicesHub: 'immigration' },
       },
       {
@@ -60,7 +63,7 @@ const routes = [
       {
         path: 'visas',
         name: 'visas-hub',
-        component: () => import('@/views/ServicesIndexView.vue'),
+        component: () => import('@/views/ServicesView.vue'),
         meta: { title: 'Canada Visas — JKS Immigration', servicesHub: 'visas' },
       },
       {
@@ -72,7 +75,7 @@ const routes = [
       {
         path: 'other',
         name: 'other-hub',
-        component: () => import('@/views/ServicesIndexView.vue'),
+        component: () => import('@/views/ServicesView.vue'),
         meta: { title: 'Other Services — JKS Immigration', servicesHub: 'other-services' },
       },
       {
@@ -112,7 +115,16 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  scrollBehavior() {
+  scrollBehavior(to, _from, savedPosition) {
+    if (savedPosition) return savedPosition
+    if (to.hash) {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          const el = document.querySelector(to.hash)
+          resolve(el ? { el: to.hash, behavior: 'smooth', top: 72 } : { top: 0 })
+        }, 120)
+      })
+    }
     return { top: 0 }
   },
 })
