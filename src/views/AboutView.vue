@@ -66,6 +66,14 @@ import { about, teamMembers, processSteps, site } from '@/config/site.js'
             {{ site.hours }}<br />
             {{ site.virtualNote }}
           </p>
+          <a
+            :href="site.facebookUrl"
+            class="jks-about-contact__link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Follow us on Facebook
+          </a>
         </div>
         <RouterLink to="/book" class="jks-btn jks-btn--primary">{{ site.bookCtaLabel }}</RouterLink>
       </div>

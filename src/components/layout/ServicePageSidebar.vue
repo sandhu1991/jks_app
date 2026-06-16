@@ -1,3 +1,7 @@
+<script setup>
+import { site } from '@/config/site.js'
+</script>
+
 <template>
   <aside id="pxl-sidebar-area" class="pxl-sidebar-area pxl-sidebar-post col-12 col-lg-4" aria-label="Service sidebar">
     <div class="pxl-sidebar-sticky">
@@ -26,7 +30,7 @@
           </div>
           <div class="author-social">
             <div class="social-item">
-              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"><span class="caseicon-facebook"></span></a>
+              <a :href="site.facebookUrl" target="_blank" rel="noopener noreferrer"><span class="caseicon-facebook"></span></a>
             </div>
             <div class="social-item">
               <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><span class="caseicon-twitter"></span></a>

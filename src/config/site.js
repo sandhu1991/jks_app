@@ -27,7 +27,9 @@ export const site = {
   logo: '/images/jks-brand-mark-header.png',
   heroImage: '/images/jks-home-hero-toronto-skyline.jpg',
   clientRating: '5.0',
-  reviewUrl: 'https://www.facebook.com/jksimmigration/reviews',
+  facebookUrl: 'https://www.facebook.com/people/JKS-Immigration/61590537196265/',
+  reviewUrl:
+    'https://www.facebook.com/people/JKS-Immigration/61590537196265/reviews',
   reviewCtaLabel: 'Write us a review',
 }
 
@@ -391,7 +393,7 @@ export const socialLinks = [
   {
     platform: 'Facebook',
     handle: 'JKS Immigration',
-    url: 'https://www.facebook.com/jksimmigration',
+    url: site.facebookUrl,
     icon: 'fa-brands fa-facebook',
     note: 'News, updates, and community posts',
   },
