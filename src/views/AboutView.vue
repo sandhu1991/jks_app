@@ -27,9 +27,6 @@ function iconClass(icon) {
             :alt="`${member.name} — ${member.role}`"
             loading="eager"
           />
-          <figcaption class="jks-about-founder__badge">
-            <span class="jks-about-founder__badge-label">{{ member.license }}</span>
-          </figcaption>
         </figure>
 
         <div class="jks-about-founder__content">
@@ -101,25 +98,6 @@ function iconClass(icon) {
   box-shadow: 0 16px 48px rgba(30, 58, 95, 0.14);
   object-fit: cover;
   aspect-ratio: 1024 / 812;
-}
-
-.jks-about-founder__badge {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  margin: 0;
-  padding: 0.5rem 0.85rem;
-  background: rgba(30, 58, 95, 0.92);
-  border-radius: 8px;
-  backdrop-filter: blur(4px);
-}
-
-.jks-about-founder__badge-label {
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: #fff;
 }
 
 .jks-about-founder__name {

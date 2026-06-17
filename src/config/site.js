@@ -198,12 +198,12 @@ export const teamMembers = [
   {
     name: 'Jasmine Kaur',
     role: 'Founder & Regulated Canadian Immigration Consultant',
-    license: 'RCIC R731629',
     tagline: 'Your journey. Our expertise. Your future.',
     credentials: [
       'CICC member',
       "Queen's University — Immigration Law",
       'Commissioner for Oaths',
+      'RCIC R731629',
       'IRB licensed',
     ],
     bio:
