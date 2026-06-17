@@ -1,10 +1,7 @@
 <script setup>
 import { computed, watchEffect } from 'vue'
 import { useRoute } from 'vue-router'
-import StaticPageContent from '@/components/content/StaticPageContent.vue'
-import LegacyPageShell from '@/components/layout/LegacyPageShell.vue'
 import ServiceTopicPage from '@/components/services/ServiceTopicPage.vue'
-import { getStaticPageHtml } from '@/content/staticPages.js'
 import { serviceLabels } from '@/config/serviceLabels.js'
 import { getServiceTopic, serviceHubs } from '@/config/serviceTopics.js'
 
@@ -19,19 +16,7 @@ const title = computed(() => {
 })
 
 const hub = computed(() => serviceHubs[category.value] ?? null)
-
 const topic = computed(() => getServiceTopic(category.value, slug.value))
-
-const fileName = computed(() => {
-  const c = category.value
-  const s = slug.value
-  if (c === 'immigration') return `immigration-${s}.html`
-  if (c === 'visas') return `visas-${s}.html`
-  if (c === 'other-services') return `other-${s}.html`
-  return ''
-})
-
-const html = computed(() => getStaticPageHtml(fileName.value))
 
 watchEffect(() => {
   document.title = `${title.value} — JKS Immigration`
@@ -45,13 +30,10 @@ watchEffect(() => {
     :title="title"
     :topic="topic"
   />
-  <LegacyPageShell v-else-if="html" variant="sidebar-right">
-    <StaticPageContent :html="html" />
-  </LegacyPageShell>
   <article v-else class="page">
     <h1>{{ title }}</h1>
     <p class="lead">This service page could not be loaded.</p>
-    <p><router-link to="/immigration">← Immigrate</router-link></p>
+    <p><router-link to="/services">← Services</router-link></p>
   </article>
 </template>
 

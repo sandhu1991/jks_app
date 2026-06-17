@@ -1,14 +1,11 @@
 <script setup>
-import { ref, watch, nextTick, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
-import { destroyLegacySwipers, initLegacySwipers } from '@/lib/initLegacySwipers.js'
 
 const props = defineProps({
   html: { type: String, default: '' },
 })
 
 const router = useRouter()
-const swiperRoot = ref(null)
 
 const serviceTopicPath = /^\/(immigration|visas|other)\/[\w-]+\/?$/
 const serviceHubPath = /^\/(immigration|visas|other)\/?$/
@@ -41,39 +38,17 @@ function onClickCapture(e) {
   e.preventDefault()
   router.push(url.pathname + url.search + url.hash)
 }
-
-watch(
-  () => props.html,
-  () => {
-    if (swiperRoot.value) destroyLegacySwipers(swiperRoot.value)
-  },
-  { flush: 'sync' },
-)
-
-watch(
-  () => props.html,
-  async (html) => {
-    await nextTick()
-    if (html && swiperRoot.value) initLegacySwipers(swiperRoot.value)
-  },
-  { flush: 'post', immediate: true },
-)
-
-onBeforeUnmount(() => {
-  if (swiperRoot.value) destroyLegacySwipers(swiperRoot.value)
-})
 </script>
 
 <template>
   <div
     v-if="props.html"
-    ref="swiperRoot"
     class="static-page-content"
     @click.capture="onClickCapture"
     v-html="props.html"
   />
   <div v-else class="static-page-content static-page-content--empty" role="status">
-    <p>This section did not load. Try running <code>npm run extract-static</code> from the project root.</p>
+    <p>This section did not load.</p>
   </div>
 </template>
 
@@ -86,11 +61,5 @@ onBeforeUnmount(() => {
   max-width: 40rem;
   margin: 0 auto;
   color: #555;
-}
-.static-page-content--empty code {
-  font-size: 0.88em;
-  background: #f0f4f8;
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
 }
 </style>

@@ -2,7 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './styles/base.css'
-import './styles/home-ircc.css'
 import './styles/modern.css'
 
 document.body.classList.add(

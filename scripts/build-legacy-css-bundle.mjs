@@ -55,8 +55,6 @@ const PRIORITY = [
   'css/wp-content__uploads__elementor__google-fonts__css__poppins.css',
   'css/wp-content__uploads__elementor__css__custom-widget-icon-list.min.css',
   'css/wp-content__themes__immigway__assets__css__libs__datetimepicker.css',
-  'css/parts/header-elementor.css',
-  'css/parts/footer-elementor.css',
 ]
 
 const ordered = []
