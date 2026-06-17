@@ -87,26 +87,26 @@ const routes = [
       {
         path: 'legal/terms',
         name: 'terms',
-        component: () => import('@/views/LegalPlaceholderView.vue'),
+        component: () => import('@/views/LegalDocumentView.vue'),
         meta: { title: 'Terms & Conditions — JKS Immigration', heading: 'Terms & Conditions' },
       },
       {
         path: 'legal/privacy',
         name: 'privacy',
-        component: () => import('@/views/LegalPlaceholderView.vue'),
+        component: () => import('@/views/LegalDocumentView.vue'),
         meta: { title: 'Privacy Policy — JKS Immigration', heading: 'Privacy Policy' },
       },
       {
         path: 'legal/cookies',
         name: 'cookies',
-        component: () => import('@/views/LegalPlaceholderView.vue'),
+        component: () => import('@/views/LegalDocumentView.vue'),
         meta: { title: 'Cookie Policy — JKS Immigration', heading: 'Cookie Policy' },
       },
       {
         path: 'faq',
         name: 'faq',
-        component: () => import('@/views/LegalPlaceholderView.vue'),
-        meta: { title: 'FAQ — JKS Immigration', heading: 'FAQ' },
+        component: () => import('@/views/FaqView.vue'),
+        meta: { title: 'FAQ — JKS Immigration' },
       },
     ],
   },
@@ -133,7 +133,6 @@ router.afterEach((to) => {
   if (to.meta.title) {
     document.title = to.meta.title
   }
-  document.body.classList.add('jks-theme-ircc-home')
 })
 
 export default router

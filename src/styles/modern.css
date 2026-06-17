@@ -222,3 +222,143 @@
   margin-left: 0;
   margin-right: 0;
 }
+
+/* Legal document prose (migrated from WordPress blocks) */
+.jks-prose {
+  max-width: 52rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--jks-ink);
+}
+
+.jks-prose h2,
+.jks-prose h3 {
+  margin: 2rem 0 0.75rem;
+  font-family: 'PT Serif', Georgia, serif;
+  color: var(--jks-ink);
+  line-height: 1.25;
+}
+
+.jks-prose h2:first-child,
+.jks-prose h3:first-child {
+  margin-top: 0;
+}
+
+.jks-prose h2 {
+  font-size: 1.5rem;
+}
+
+.jks-prose h3 {
+  font-size: 1.15rem;
+}
+
+.jks-prose p {
+  margin: 0 0 1rem;
+  color: var(--jks-muted);
+}
+
+.jks-prose ul,
+.jks-prose ol {
+  margin: 0 0 1.25rem 1.25rem;
+  padding: 0;
+  color: var(--jks-muted);
+}
+
+.jks-prose li {
+  margin-bottom: 0.35rem;
+}
+
+.jks-prose a {
+  color: var(--jks-brand);
+  text-decoration: underline;
+}
+
+/* FAQ accordion */
+.jks-faq {
+  max-width: 52rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.jks-faq__item {
+  background: #fff;
+  border: 1px solid var(--jks-border);
+  border-radius: var(--jks-radius);
+  overflow: hidden;
+  box-shadow: var(--jks-shadow);
+}
+
+.jks-faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--jks-ink);
+  cursor: pointer;
+}
+
+.jks-faq__question--open .jks-faq__icon {
+  transform: rotate(180deg);
+}
+
+.jks-faq__icon {
+  flex-shrink: 0;
+  color: var(--jks-navy);
+  transition: transform 0.2s ease;
+}
+
+.jks-faq__answer {
+  padding: 0 1.25rem 1.15rem;
+}
+
+.jks-faq__answer-text {
+  margin: 0;
+  white-space: pre-line;
+  line-height: 1.65;
+  color: var(--jks-muted);
+}
+
+.jks-faq-cta {
+  background: linear-gradient(180deg, var(--jks-navy) 0%, var(--jks-navy-dark) 100%);
+  color: #fff;
+}
+
+.jks-faq-cta__inner {
+  max-width: 40rem;
+}
+
+.jks-faq-cta .jks-heading {
+  color: #fff;
+}
+
+.jks-faq-cta .jks-lead {
+  color: #e8edf3;
+  margin-bottom: 1.5rem;
+}
+
+.jks-faq-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.jks-faq-cta .jks-btn--outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.jks-faq-cta .jks-btn--outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.6);
+}

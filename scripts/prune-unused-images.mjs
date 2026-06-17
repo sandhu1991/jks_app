@@ -1,5 +1,5 @@
 /**
- * Remove public/images files not referenced by live app sources or legacy CSS.
+ * Remove public/images files not referenced by app sources.
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -30,46 +30,20 @@ function collectFromText(text, refs) {
   while ((m = re.exec(text))) {
     refs.add(m[0].replace(/^\/images\//, '').split('#')[0].split('?')[0])
   }
-  const cssRe = /url\(\.\.\/images\/([^)]+)\)/g
-  while ((m = cssRe.exec(text))) {
-    refs.add(m[1].split('#')[0].split('?')[0])
-  }
 }
 
 function collectRefs() {
   const refs = new Set(KEEP_ALWAYS)
 
-  const scanDirs = [
-    path.join(root, 'src'),
-    path.join(root, 'public/css'),
-    path.join(root, 'index.html'),
-  ]
-
   function scanFile(file) {
     if (!fs.existsSync(file)) return
-    if (file.endsWith('.html') && file.includes('src/content/pages')) {
-      const base = path.basename(file)
-      const allowed = new Set([
-        'terms-condition.html',
-        'privacy-policy.html',
-        'cookie-policy.html',
-        'faq.html',
-      ])
-      if (!allowed.has(base)) return
-    }
     if (/\.(vue|js|css|html|json)$/.test(file)) {
       collectFromText(fs.readFileSync(file, 'utf8'), refs)
     }
   }
 
-  function scanPath(p) {
-    if (fs.statSync(p).isFile()) scanFile(p)
-    else walk(p).forEach(scanFile)
-  }
-
-  scanPath(path.join(root, 'index.html'))
+  scanFile(path.join(root, 'index.html'))
   walk(path.join(root, 'src')).forEach(scanFile)
-  walk(path.join(root, 'public/css')).forEach(scanFile)
 
   return refs
 }
@@ -89,7 +63,6 @@ for (const abs of allFiles) {
   removed++
 }
 
-// Remove empty dirs
 function pruneEmptyDirs(dir) {
   if (!fs.existsSync(dir)) return
   for (const ent of fs.readdirSync(dir, { withFileTypes: true })) {

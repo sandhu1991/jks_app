@@ -189,7 +189,7 @@ export const about = {
     'Behind every application is a consultant who knows the forms, the policy updates, and the stakes for your family or career.',
   processIntro:
     'We break the journey into three clear phases so you always know what happens next and what we need from you.',
-  image: '/images/wp-content__uploads__2023__10__Girl-and-world.jpg',
+  image: '/images/about/girl-and-world.jpg',
   highlights: [
     'Consultations by appointment via Zoom or Google Meet',
     'Remote meetings via Zoom, Google Meet, and video call',
@@ -205,7 +205,7 @@ export const teamMembers = [
     license: 'Licence R731629 · CICC',
     bio:
       'Jasmine founded JKS Immigration to offer hands-on, ethical consulting for families and professionals navigating Canadian immigration. She holds an active RCIC licence (R731629) and completed her Graduate Diploma in Immigration and Citizenship Law at Queen\'s University in 2023, strengthening her expertise in immigration law, policy, and application strategy. She manages complex files personally — from visitor and study permits to spousal sponsorship and permanent residence — and is known for clear explanations, careful document review, and quick, thorough responses to client questions.',
-    image: '/images/wp-content__uploads__2023__10__contact-banner1.jpg',
+    image: '/images/about/jasmine-kaur.jpg',
   },
 ]
 

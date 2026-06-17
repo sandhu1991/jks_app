@@ -19,7 +19,6 @@ export const serviceHubs = {
 
 /**
  * Modern Vue-rendered service pages (slug → content).
- * Topics not listed here still use legacy HTML.
  */
 export const serviceTopics = {
   immigration: {
