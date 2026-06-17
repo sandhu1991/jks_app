@@ -1,5 +1,4 @@
 <script setup>
-import TrustStats from '@/components/home/TrustStats.vue'
 import PageHero from '@/components/layout/PageHero.vue'
 import {
   site,
@@ -21,16 +20,14 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
       :lead="bookPage.lead"
     />
 
-    <TrustStats />
-
     <section class="jks-section jks-section--muted">
       <div class="jks-container">
-        <div class="jks-book-online jks-card">
+        <div class="jks-book-online jks-card jks-book-hover">
           <span class="jks-book-online__icon" aria-hidden="true">💻</span>
           <p class="jks-book-online__text">{{ bookPage.onlineNote }}</p>
         </div>
 
-        <article class="jks-book-featured">
+        <article class="jks-book-featured jks-book-hover jks-book-hover--featured">
           <div class="jks-book-featured__accent" aria-hidden="true" />
 
           <div class="jks-book-featured__inner">
@@ -90,7 +87,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
           <article
             v-for="pkg in bookPackages"
             :key="pkg.title"
-            class="jks-card jks-book-package"
+            class="jks-card jks-book-package jks-book-hover"
           >
             <h3 class="jks-book-package__title">{{ pkg.title }}</h3>
             <p class="jks-book-package__price">
@@ -105,7 +102,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 
     <section class="jks-section jks-section--muted">
       <div class="jks-container">
-        <div class="jks-book-bottom-cta jks-card">
+        <div class="jks-book-bottom-cta jks-card jks-book-hover">
           <p>
             Not sure which program applies?
             <strong>{{ site.bookCtaLabel }}</strong> and we will map out your next steps.
@@ -138,6 +135,8 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   font-size: 1.5rem;
   line-height: 1;
   flex-shrink: 0;
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
 .jks-book-online__text {
@@ -202,6 +201,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   font-weight: 700;
   color: var(--jks-navy);
   line-height: 1.15;
+  transition: color 0.25s ease;
 }
 
 .jks-book-featured__subtitle {
@@ -283,6 +283,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   color: var(--jks-brand);
   line-height: 1;
   letter-spacing: -0.02em;
+  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
 }
 
 .jks-book-featured__price-note {
@@ -334,6 +335,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   font-weight: 700;
   color: var(--jks-navy);
   line-height: 1.3;
+  transition: color 0.25s ease;
 }
 
 .jks-book-package__price {
@@ -348,6 +350,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   font-size: 1.45rem;
   font-weight: 700;
   color: var(--jks-brand);
+  transition: color 0.25s ease;
 }
 
 .jks-book-package__duration {
@@ -363,6 +366,150 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   font-size: 0.92rem;
   line-height: 1.6;
   color: var(--jks-muted);
+  transition: color 0.25s ease;
+}
+
+/* Shared hover highlight (matches home & contact cards) */
+.jks-book-hover {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.35s ease,
+    background 0.35s ease;
+}
+
+.jks-book-hover:not(.jks-book-hover--featured)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--jks-brand) 0%, var(--jks-navy) 100%);
+  transform: scaleY(0);
+  transform-origin: center top;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  border-radius: var(--jks-radius) 0 0 var(--jks-radius);
+  z-index: 1;
+}
+
+.jks-book-hover::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 60%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.65s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.jks-book-hover:hover {
+  transform: translateY(-8px) scale(1.015);
+  border-color: rgba(185, 28, 28, 0.32);
+  box-shadow:
+    0 16px 40px rgba(30, 58, 95, 0.14),
+    0 0 0 1px rgba(185, 28, 28, 0.08);
+}
+
+.jks-book-online:hover,
+.jks-book-package:hover,
+.jks-book-bottom-cta:hover {
+  background: linear-gradient(145deg, #fff 0%, #fff9f9 45%, #f6f8fb 100%);
+}
+
+.jks-book-hover--featured:hover {
+  box-shadow:
+    0 18px 44px rgba(30, 58, 95, 0.16),
+    0 0 0 1px rgba(185, 28, 28, 0.12);
+}
+
+.jks-book-hover:not(.jks-book-hover--featured):hover::before {
+  transform: scaleY(1);
+}
+
+.jks-book-hover:hover::after {
+  transform: translateX(120%);
+}
+
+.jks-book-online:hover .jks-book-online__icon {
+  animation: jks-book-icon-shuffle 0.55s ease;
+}
+
+.jks-book-package:hover .jks-book-package__title {
+  color: var(--jks-brand-dark);
+}
+
+.jks-book-package:hover .jks-book-package__amount {
+  color: var(--jks-navy);
+}
+
+.jks-book-package:hover .jks-book-package__desc {
+  color: var(--jks-ink);
+}
+
+.jks-book-hover--featured:hover .jks-book-featured__title {
+  color: var(--jks-brand-dark);
+}
+
+.jks-book-hover--featured:hover .jks-book-featured__amount {
+  transform: scale(1.04);
+}
+
+.jks-book-bottom-cta:hover strong {
+  color: var(--jks-navy);
+}
+
+.jks-book-bottom-cta strong {
+  transition: color 0.25s ease;
+}
+
+@keyframes jks-book-icon-shuffle {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  20% {
+    transform: scale(1.15) rotate(-8deg) translateX(-2px);
+  }
+  45% {
+    transform: scale(1.1) rotate(6deg) translateX(2px);
+  }
+  70% {
+    transform: scale(1.12) rotate(-4deg);
+  }
+  100% {
+    transform: scale(1.08) rotate(0deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jks-book-hover,
+  .jks-book-hover::before,
+  .jks-book-hover::after,
+  .jks-book-online__icon,
+  .jks-book-featured__amount {
+    transition: none;
+    animation: none;
+  }
+
+  .jks-book-hover:hover {
+    transform: none;
+  }
+
+  .jks-book-hover:hover::after {
+    transform: translateX(-120%);
+  }
+
+  .jks-book-hover--featured:hover .jks-book-featured__amount {
+    transform: none;
+  }
 }
 
 .jks-book-bottom-cta {

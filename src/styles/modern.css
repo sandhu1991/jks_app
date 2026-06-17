@@ -126,6 +126,60 @@
   color: var(--jks-navy);
 }
 
+/* Scroll reveal (home & reusable) */
+.jks-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.jks-reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.jks-reveal--visible .jks-stagger > * {
+  animation: jks-fade-up 0.55s ease both;
+}
+
+.jks-stagger > * {
+  opacity: 0;
+}
+
+.jks-stagger > *:nth-child(1) { animation-delay: 0ms; }
+.jks-stagger > *:nth-child(2) { animation-delay: 70ms; }
+.jks-stagger > *:nth-child(3) { animation-delay: 140ms; }
+.jks-stagger > *:nth-child(4) { animation-delay: 210ms; }
+.jks-stagger > *:nth-child(5) { animation-delay: 280ms; }
+.jks-stagger > *:nth-child(6) { animation-delay: 350ms; }
+
+@keyframes jks-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jks-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .jks-reveal--visible .jks-stagger > *,
+  .jks-stagger > * {
+    opacity: 1;
+    animation: none;
+  }
+}
+
 .jks-card {
   background: #fff;
   border: 1px solid var(--jks-border);

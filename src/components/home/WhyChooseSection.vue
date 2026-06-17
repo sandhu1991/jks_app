@@ -12,7 +12,7 @@ import { whyChoose } from '@/config/site.js'
         time — with honest answers when a pathway is not the right fit.
       </p>
 
-      <div class="jks-why__list">
+      <div class="jks-why__list jks-stagger">
         <article v-for="item in whyChoose" :key="item.title" class="jks-why__row">
           <span class="jks-icon-badge jks-icon-badge--navy" aria-hidden="true">
             <i class="fa-solid" :class="item.icon" />

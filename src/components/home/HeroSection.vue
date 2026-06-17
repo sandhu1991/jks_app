@@ -4,7 +4,7 @@ import { site } from '@/config/site.js'
 </script>
 
 <template>
-  <section class="jks-hero">
+  <section class="jks-hero jks-hero--enter">
     <div class="jks-hero__bg" :style="{ backgroundImage: `url(${site.heroImage})` }" aria-hidden="true" />
     <div class="jks-hero__overlay" aria-hidden="true" />
     <div class="jks-container jks-hero__content">
@@ -21,6 +21,7 @@ import { site } from '@/config/site.js'
       </p>
       <div class="jks-hero__actions">
         <RouterLink to="/book" class="jks-btn jks-btn--primary jks-hero__cta">Book a Consultation</RouterLink>
+        <RouterLink to="/about" class="jks-btn jks-btn--outline jks-hero__cta-secondary">About Us</RouterLink>
       </div>
     </div>
   </section>
@@ -112,6 +113,9 @@ import { site } from '@/config/site.js'
 .jks-hero__actions {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
 .jks-hero__cta {
@@ -124,5 +128,40 @@ import { site } from '@/config/site.js'
 .jks-hero__cta:hover {
   background: var(--jks-brand-dark);
   border-color: var(--jks-brand-dark);
+}
+
+.jks-hero__cta-secondary {
+  padding: 0.85rem 1.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.jks-hero__cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.jks-hero--enter .jks-hero__content {
+  animation: jks-hero-enter 0.85s ease both;
+}
+
+@keyframes jks-hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jks-hero--enter .jks-hero__content {
+    animation: none;
+  }
 }
 </style>

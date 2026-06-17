@@ -1,12 +1,31 @@
 <script setup>
+import { ref, onMounted } from 'vue'
 import { trustStats } from '@/config/site.js'
+import { useCountUp } from '@/composables/useCountUp.js'
+
+const sectionRef = ref(null)
+const counters = trustStats.map((stat) => {
+  if (stat.text) {
+    return { label: stat.label, display: ref(stat.text), observe: () => {} }
+  }
+  const { display, observe } = useCountUp(stat.countTo, {
+    decimals: stat.decimals ?? 0,
+    suffix: stat.suffix ?? '',
+  })
+  return { label: stat.label, display, observe }
+})
+
+onMounted(() => {
+  if (!sectionRef.value) return
+  counters.forEach((c) => c.observe(sectionRef.value))
+})
 </script>
 
 <template>
-  <section class="jks-trust" aria-label="Practice highlights">
+  <section ref="sectionRef" class="jks-trust" aria-label="Practice highlights">
     <div class="jks-container jks-trust__grid">
-      <div v-for="stat in trustStats" :key="stat.label" class="jks-trust__item">
-        <span class="jks-trust__value">{{ stat.value }}</span>
+      <div v-for="stat in counters" :key="stat.label" class="jks-trust__item">
+        <span class="jks-trust__value">{{ stat.display }}</span>
         <span class="jks-trust__label">{{ stat.label }}</span>
       </div>
     </div>
@@ -33,6 +52,7 @@ import { trustStats } from '@/config/site.js'
   font-weight: 700;
   color: #0f1f33;
   line-height: 1.2;
+  font-variant-numeric: tabular-nums;
 }
 
 .jks-trust__label {

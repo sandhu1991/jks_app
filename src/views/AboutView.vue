@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink } from 'vue-router'
-import TrustStats from '@/components/home/TrustStats.vue'
 import PageHero from '@/components/layout/PageHero.vue'
+import BookCtaBand from '@/components/common/BookCtaBand.vue'
 import { about, teamMembers, processSteps } from '@/config/site.js'
 
 const member = teamMembers[0]
@@ -18,8 +18,6 @@ function iconClass(icon) {
       :title="about.missionTitle"
       :lead="about.missionText"
     />
-
-    <TrustStats />
 
     <section class="jks-section jks-about-founder">
       <div class="jks-container jks-about-founder__grid">
@@ -45,7 +43,7 @@ function iconClass(icon) {
             <li v-for="cred in member.credentials" :key="cred">{{ cred }}</li>
           </ul>
 
-          <RouterLink to="/book" class="jks-btn jks-btn--navy">Book with Jasmine</RouterLink>
+          <RouterLink to="/book" class="jks-btn jks-btn--navy">{{ member.ctaLabel }}</RouterLink>
         </div>
       </div>
     </section>
@@ -78,6 +76,8 @@ function iconClass(icon) {
         </div>
       </div>
     </section>
+
+    <BookCtaBand standalone />
   </div>
 </template>
 

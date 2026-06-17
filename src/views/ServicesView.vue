@@ -1,7 +1,6 @@
 <script setup>
 import { computed, watch, nextTick } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
-import TrustStats from '@/components/home/TrustStats.vue'
 import PageHero from '@/components/layout/PageHero.vue'
 import { serviceCategories } from '@/config/serviceCatalog.js'
 import { site, servicesPage } from '@/config/site.js'
@@ -46,8 +45,6 @@ function topicSummary(intro) {
       :title="hero.title"
       :lead="hero.lead"
     />
-
-    <TrustStats />
 
     <nav class="jks-services-jump" aria-label="Service categories">
       <div class="jks-container jks-services-jump__inner">

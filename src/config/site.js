@@ -42,10 +42,10 @@ export const contactPage = {
 
 
 export const trustStats = [
-  { value: '100+', label: 'Cases served' },
-  { value: '2+', label: 'Years of service' },
-  { value: '5.0 ★', label: 'Average client rating' },
-  { value: 'RCIC', label: 'CICC-regulated' },
+  { label: 'Cases served', countTo: 100, suffix: '+' },
+  { label: 'Years of service', countTo: 2, suffix: '+' },
+  { label: 'Average client rating', countTo: 5, decimals: 1, suffix: ' ★' },
+  { label: 'CICC-regulated', text: 'RCIC' },
 ]
 
 export const services = [
@@ -209,6 +209,7 @@ export const teamMembers = [
     bio:
       'Jasmine leads every file personally — study permits, sponsorship, and permanent residence — with plain-language guidance and careful document review.',
     image: '/images/about/jasmine-kaur.png',
+    ctaLabel: 'Schedule a Consultation',
   },
 ]
 
