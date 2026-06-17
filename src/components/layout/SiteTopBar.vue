@@ -7,7 +7,7 @@ defineProps({
 
 defineEmits(['toggle-nav'])
 
-const logoSrc = '/images/jks-brand-mark-header.png'
+const logoSrc = '/images/jks-logo-header.png'
 </script>
 
 <template>

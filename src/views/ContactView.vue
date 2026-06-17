@@ -23,7 +23,7 @@ const cards = contactChannels.map(resolveCard)
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-contact-hero">
+    <section class="jks-section jks-page-hero jks-contact-hero">
       <div class="jks-container jks-contact-hero__inner">
         <p class="jks-kicker">Get in touch</p>
         <h1 class="jks-heading">We are here to answer your questions</h1>
@@ -115,20 +115,6 @@ const cards = contactChannels.map(resolveCard)
 </template>
 
 <style scoped>
-.jks-contact-hero {
-  padding-bottom: 0;
-}
-
-.jks-contact-hero__inner {
-  text-align: center;
-}
-
-.jks-contact-hero__inner .jks-heading,
-.jks-contact-hero__inner .jks-lead {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .jks-contact-cards__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

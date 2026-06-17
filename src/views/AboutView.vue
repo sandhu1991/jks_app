@@ -6,7 +6,7 @@ import { about, teamMembers, processSteps, site } from '@/config/site.js'
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-about-hero">
+    <section class="jks-section jks-page-hero jks-about-hero">
       <div class="jks-container jks-about-hero__inner">
         <p class="jks-kicker">Our story</p>
         <h1 class="jks-heading">{{ about.missionTitle }}</h1>
@@ -98,15 +98,8 @@ import { about, teamMembers, processSteps, site } from '@/config/site.js'
 </template>
 
 <style scoped>
-.jks-about-hero {
-  padding-bottom: 0;
-  text-align: center;
-}
-
-.jks-about-hero__inner .jks-heading,
 .jks-about-hero__inner .jks-lead {
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 48rem;
 }
 
 .jks-about-split {

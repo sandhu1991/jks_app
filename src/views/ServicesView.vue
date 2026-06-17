@@ -27,7 +27,7 @@ function topicSummary(intro) {
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-services-hero">
+    <section class="jks-section jks-page-hero jks-services-hero">
       <div class="jks-container jks-services-hero__inner">
         <p class="jks-kicker">What we do</p>
         <h1 class="jks-heading">Immigration services</h1>
@@ -115,10 +115,6 @@ function topicSummary(intro) {
 <style scoped>
 .jks-services-category {
   scroll-margin-top: 5.5rem;
-}
-
-.jks-services-hero {
-  padding-bottom: 1.5rem;
 }
 
 .jks-services-hero__inner .jks-lead {

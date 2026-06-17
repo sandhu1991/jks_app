@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a wide, short header logo from the square WhatsApp export (trim + scale)."""
+"""Build a wide header logo with full lockup (stem + motto)."""
 from __future__ import annotations
 
 from pathlib import Path
@@ -8,7 +8,6 @@ from PIL import Image
 
 
 def tight_bbox(img: Image.Image, thresh: int = 238) -> tuple[int, int, int, int] | None:
-    """Bounding box of pixels that are not near-white."""
     rgb = img.convert("RGB")
     px = rgb.load()
     w, h = rgb.size
@@ -26,31 +25,35 @@ def tight_bbox(img: Image.Image, thresh: int = 238) -> tuple[int, int, int, int]
                 max_y = max(max_y, y)
     if not found:
         return None
-    pad = 2
-    return (
-        max(0, min_x - pad),
-        max(0, min_y - pad),
-        min(w, max_x + pad + 1),
-        min(h, max_y + pad + 1),
-    )
+    return min_x, min_y, max_x + 1, max_y + 1
 
 
 def main() -> None:
     root = Path(__file__).resolve().parents[1]
-    src = (
-        root
-        / "public/images/wp-content__uploads__2023__11__WhatsApp-Image-2025-06-14-at-6.37.54-PM.jpeg"
-    )
-    out_png = root / "public/images/jks-brand-mark-header.png"
-    im = Image.open(src)
+    src = root / "public/images/jks-logo-light.png"
+    out_png = root / "public/images/jks-logo-header.png"
+    im = Image.open(src).convert("RGB")
     box = tight_bbox(im) or (0, 0, im.width, im.height)
-    cropped = im.crop(box).convert("RGB")
+    left, top, right, bottom = box
 
-    target_h = 56
+    # Extra padding so maple stem + motto line are never clipped
+    pad_left = 14
+    pad_top = 10
+    pad_right = 10
+    pad_bottom = 8
+    cropped = im.crop(
+        (
+            max(0, left - pad_left),
+            max(0, top - pad_top),
+            min(im.width, right + pad_right),
+            min(im.height, bottom + pad_bottom),
+        )
+    )
+
+    target_h = 152  # 2x retina; shown at ~76px in header
     scale = target_h / cropped.height
     new_w = max(1, int(round(cropped.width * scale)))
-    new_h = target_h
-    out = cropped.resize((new_w, new_h), Image.Resampling.LANCZOS)
+    out = cropped.resize((new_w, target_h), Image.Resampling.LANCZOS)
     out.save(out_png, format="PNG", optimize=True)
     print(f"Wrote {out_png} ({out.width}x{out.height}) from crop {box}")
 

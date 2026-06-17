@@ -192,3 +192,33 @@
   background: var(--jks-navy-dark);
   border-color: var(--jks-navy-dark);
 }
+
+/* Inner page hero — matches header Book a Consultation button (navy) */
+.jks-page-hero {
+  background: linear-gradient(180deg, var(--jks-navy) 0%, var(--jks-navy-dark) 100%);
+  color: #fff;
+  padding-bottom: clamp(2.25rem, 4.5vw, 3.25rem);
+}
+
+.jks-page-hero .jks-kicker {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.jks-page-hero .jks-heading {
+  color: #fff;
+}
+
+.jks-page-hero .jks-lead {
+  color: #e8edf3;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 48rem;
+}
+
+.jks-page-hero .jks-kicker,
+.jks-page-hero .jks-heading {
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+}

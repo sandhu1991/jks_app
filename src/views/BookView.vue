@@ -13,7 +13,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-book-hero">
+    <section class="jks-section jks-page-hero jks-book-hero">
       <div class="jks-container">
         <div class="jks-book-hero__inner">
           <p class="jks-kicker">Book with JKS</p>
@@ -125,23 +125,6 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 </template>
 
 <style scoped>
-.jks-book-hero {
-  padding-bottom: 0;
-}
-
-.jks-book-hero__inner {
-  width: 100%;
-  text-align: left;
-}
-
-.jks-book-hero__inner .jks-kicker,
-.jks-book-hero__inner .jks-heading,
-.jks-book-hero__inner .jks-lead {
-  text-align: left;
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .jks-book-hero__inner .jks-lead {
   max-width: 48rem;
 }

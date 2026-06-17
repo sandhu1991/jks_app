@@ -24,7 +24,10 @@ export const site = {
   bookPath: '/book',
   /** Your Cal.com username — e.g. jksimmigration → cal.com/jksimmigration/... */
   calComUsername: 'jks-immigration-2r0l63',
-  logo: '/images/jks-brand-mark-header.png',
+  logo: '/images/jks-logo-header.png',
+  logoFull: '/images/jks-logo-light.png',
+  logoDark: '/images/jks-logo-dark.png',
+  logoIcon: '/images/jks-logo-light.png',
   heroImage: '/images/jks-home-hero-toronto-skyline.jpg',
   clientRating: '5.0',
   facebookUrl: 'https://www.facebook.com/people/JKS-Immigration/61590537196265/',

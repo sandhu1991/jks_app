@@ -9,7 +9,7 @@ import { site } from '@/config/site.js'
     <div class="jks-header__top">
       <div class="jks-header__top-inner">
         <RouterLink to="/" class="jks-header__logo">
-          <img :src="site.logo" width="144" height="56" alt="JKS Immigration" fetchpriority="high" />
+          <img :src="site.logo" alt="JKS Immigration" fetchpriority="high" />
         </RouterLink>
 
         <div class="jks-header__actions">
@@ -39,32 +39,36 @@ import { site } from '@/config/site.js'
 .jks-header__top {
   border-bottom: 1px solid var(--jks-border, #dde3ea);
   box-shadow: 0 1px 12px rgba(26, 26, 26, 0.04);
+  overflow: hidden;
 }
 
 .jks-header__top-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0.65rem 1.25rem;
+  padding: 0.35rem 1.25rem 0.3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  box-sizing: border-box;
 }
 
 .jks-header__logo {
+  display: flex;
+  align-items: center;
   line-height: 0;
   text-decoration: none;
-  flex-shrink: 0;
-  align-self: flex-end;
-  margin-bottom: -0.15rem;
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 .jks-header__logo img {
   display: block;
-  height: 44px;
   width: auto;
-  max-width: min(180px, 48vw);
+  height: calc(4.45rem + 3px);
+  max-width: min(340px, 60vw);
   object-fit: contain;
+  object-position: left center;
 }
 
 .jks-header__actions {
@@ -76,8 +80,9 @@ import { site } from '@/config/site.js'
 
 .jks-header__book {
   white-space: nowrap;
-  padding: 0.7rem 1.35rem;
-  font-size: 0.95rem;
+  padding: 0.5rem 1.15rem;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* Black nav bar */
@@ -89,7 +94,7 @@ import { site } from '@/config/site.js'
 .jks-header__nav-inner {
   max-width: 1120px;
   margin: 0 auto;
-  padding: 0.35rem 1.25rem 0.55rem;
+  padding: 0.2rem 1.25rem 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,15 +109,24 @@ import { site } from '@/config/site.js'
     overflow: visible;
   }
 
+  .jks-header__top-inner {
+    padding: 0.3rem 0.75rem 0.25rem;
+  }
+
   .jks-header__nav-inner {
-    padding: 0.25rem 0.75rem 0.45rem;
+    padding: 0.15rem 0.75rem 0.35rem;
     max-width: none;
     justify-content: center;
   }
 
+  .jks-header__logo img {
+    height: calc(3.4rem + 3px);
+    max-width: min(260px, 66vw);
+  }
+
   .jks-header__book {
-    font-size: 0.82rem;
-    padding: 0.55rem 0.85rem;
+    font-size: 0.78rem;
+    padding: 0.42rem 0.75rem;
   }
 }
 </style>
