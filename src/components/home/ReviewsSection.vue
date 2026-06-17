@@ -153,7 +153,9 @@ function next() {
   margin: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.2rem;
+  text-align: right;
 }
 
 .jks-reviews__name {
