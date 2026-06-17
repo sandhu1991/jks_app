@@ -1,6 +1,7 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { site, contactChannels, socialLinks } from '@/config/site.js'
+import TrustStats from '@/components/home/TrustStats.vue'
+import PageHero from '@/components/layout/PageHero.vue'
+import { site, contactPage, contactChannels, socialLinks } from '@/config/site.js'
 
 function resolveCard(card) {
   const value = card.valueKey ? site[card.valueKey] : ''
@@ -23,13 +24,13 @@ const cards = contactChannels.map(resolveCard)
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-page-hero jks-contact-hero">
-      <div class="jks-container jks-contact-hero__inner">
-        <p class="jks-kicker">Get in touch</p>
-        <h1 class="jks-heading">We are here to answer your questions</h1>
-        <p class="jks-lead">{{ site.responseNote }}</p>
-      </div>
-    </section>
+    <PageHero
+      :kicker="contactPage.kicker"
+      :title="contactPage.title"
+      :lead="contactPage.lead"
+    />
+
+    <TrustStats />
 
     <section class="jks-section jks-section--muted">
       <div class="jks-container">
@@ -54,19 +55,6 @@ const cards = contactChannels.map(resolveCard)
             <p class="jks-contact-card__note">{{ card.note }}</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="jks-section jks-contact-ready">
-      <div class="jks-container jks-contact-ready__inner jks-card">
-        <div>
-          <h2 class="jks-contact-ready__title">Ready to discuss your file?</h2>
-          <p class="jks-contact-ready__text">
-            {{ site.hours }}<br />
-            {{ site.virtualNote }}
-          </p>
-        </div>
-        <RouterLink to="/book" class="jks-btn jks-btn--primary">{{ site.bookCtaLabel }}</RouterLink>
       </div>
     </section>
 
@@ -96,19 +84,6 @@ const cards = contactChannels.map(resolveCard)
             <p class="jks-contact-card__note">{{ link.note }}</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <section class="jks-contact-book">
-      <div class="jks-container jks-contact-book__inner">
-        <div>
-          <h2 class="jks-contact-book__title">Book a Consultation</h2>
-          <p class="jks-contact-book__text">{{ site.consultationNote }}</p>
-          <p class="jks-contact-book__meta">{{ site.hours }} · {{ site.credential }}</p>
-        </div>
-        <RouterLink to="/book" class="jks-btn jks-btn--primary jks-contact-book__btn">
-          Book a Consultation
-        </RouterLink>
       </div>
     </section>
   </div>
@@ -160,88 +135,10 @@ const cards = contactChannels.map(resolveCard)
   margin-bottom: 1.5rem;
 }
 
-.jks-contact-ready__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  padding: 1.75rem;
-}
-
-.jks-contact-ready__title {
-  margin: 0 0 0.35rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.jks-contact-ready__text {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: #5c5c5c;
-}
-
-.jks-contact-ready__link {
-  color: var(--jks-brand);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.jks-contact-ready__link:hover {
-  text-decoration: underline;
-}
-
 .jks-contact-social__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.15rem;
-}
-
-.jks-contact-book {
-  padding: 2.5rem 1.25rem;
-  background: linear-gradient(120deg, #0f1f33 0%, #152a45 55%, #1a1a2e 100%);
-  color: #fff;
-}
-
-.jks-contact-book__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.jks-contact-book__title {
-  margin: 0 0 0.35rem;
-  font-size: clamp(1.35rem, 3vw, 1.75rem);
-  font-weight: 700;
-  color: #fff;
-}
-
-.jks-contact-book__text {
-  margin: 0 0 0.35rem;
-  color: #e8edf3;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  max-width: 36rem;
-}
-
-.jks-contact-book__meta {
-  margin: 0;
-  font-size: 0.88rem;
-  color: #c5d0dc;
-}
-
-.jks-contact-book__btn {
-  flex-shrink: 0;
-  background: var(--jks-brand);
-  border-color: var(--jks-brand);
-}
-
-.jks-contact-book__btn:hover {
-  background: var(--jks-brand-dark);
-  border-color: var(--jks-brand-dark);
 }
 
 @media (max-width: 800px) {

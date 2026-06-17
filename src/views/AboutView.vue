@@ -1,92 +1,76 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import TrustStats from '@/components/home/TrustStats.vue'
-import { about, teamMembers, processSteps, site } from '@/config/site.js'
+import PageHero from '@/components/layout/PageHero.vue'
+import { about, teamMembers, processSteps } from '@/config/site.js'
+
+const member = teamMembers[0]
+
+function iconClass(icon) {
+  return icon.includes('fa-brands') ? icon : `fa-solid ${icon}`
+}
 </script>
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-page-hero jks-about-hero">
-      <div class="jks-container jks-about-hero__inner">
-        <p class="jks-kicker">Our story</p>
-        <h1 class="jks-heading">{{ about.missionTitle }}</h1>
-        <p class="jks-lead">{{ about.missionText }}</p>
-      </div>
-    </section>
+    <PageHero
+      kicker="About JKS Immigration"
+      :title="about.missionTitle"
+      :lead="about.missionText"
+    />
 
     <TrustStats />
 
-    <section class="jks-section">
-      <div class="jks-container jks-about-split">
-        <div class="jks-about-split__media">
-          <img :src="about.image" alt="JKS Immigration — guiding your path to Canada" loading="lazy" />
-        </div>
-        <div class="jks-about-split__content">
-          <p class="jks-kicker">Who we are</p>
-          <h2 class="jks-heading">{{ about.introTitle }}</h2>
-          <p class="jks-about-text">{{ about.introText }}</p>
-          <p class="jks-about-text">{{ about.accreditation }}</p>
-          <ul class="jks-about-highlights">
-            <li v-for="item in about.highlights" :key="item">{{ item }}</li>
+    <section class="jks-section jks-about-founder">
+      <div class="jks-container jks-about-founder__grid">
+        <figure class="jks-about-founder__figure">
+          <img
+            :src="member.image"
+            :alt="`${member.name} — ${member.role}`"
+            loading="eager"
+          />
+          <figcaption class="jks-about-founder__badge">
+            <span class="jks-about-founder__badge-label">{{ member.license }}</span>
+          </figcaption>
+        </figure>
+
+        <div class="jks-about-founder__content">
+          <p class="jks-kicker">Meet your consultant</p>
+          <h2 class="jks-heading jks-about-founder__name">{{ member.name }}</h2>
+          <p class="jks-about-founder__role">{{ member.role }}</p>
+          <p class="jks-about-founder__tagline">“{{ member.tagline }}”</p>
+          <p class="jks-about-founder__bio">{{ member.bio }}</p>
+
+          <ul class="jks-about-founder__creds">
+            <li v-for="cred in member.credentials" :key="cred">{{ cred }}</li>
           </ul>
-          <RouterLink to="/book" class="jks-btn jks-btn--navy">Book a Consultation</RouterLink>
+
+          <RouterLink to="/book" class="jks-btn jks-btn--navy">Book with Jasmine</RouterLink>
         </div>
       </div>
     </section>
 
-    <section class="jks-section jks-section--muted">
-      <div class="jks-container">
-        <p class="jks-kicker">Lead consultant</p>
-        <h2 class="jks-heading">Who leads your file</h2>
-        <p class="jks-lead jks-about-team__intro">{{ about.teamIntro }}</p>
-
-        <article v-for="member in teamMembers" :key="member.name" class="jks-card jks-about-team__profile">
-          <div class="jks-about-team__media">
-            <img
-              :src="member.image"
-              :alt="`${member.name} — ${member.role}`"
-              loading="lazy"
-            />
-          </div>
-          <div class="jks-about-team__body">
-            <h3 class="jks-about-team__name">{{ member.name }}</h3>
-            <p class="jks-about-team__role">{{ member.role }}</p>
-            <p class="jks-about-team__license">{{ member.license }}</p>
-            <p class="jks-about-team__bio">{{ member.bio }}</p>
+    <section class="jks-section jks-section--muted jks-about-pillars">
+      <div class="jks-container jks-about-pillars__grid">
+        <article v-for="pillar in about.pillars" :key="pillar.title" class="jks-about-pillar">
+          <span class="jks-about-pillar__icon" aria-hidden="true">
+            <i :class="iconClass(pillar.icon)" />
+          </span>
+          <div>
+            <h3 class="jks-about-pillar__title">{{ pillar.title }}</h3>
+            <p class="jks-about-pillar__text">{{ pillar.text }}</p>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="jks-section jks-about-contact">
-      <div class="jks-container jks-about-contact__inner jks-card">
-        <div>
-          <h2 class="jks-about-contact__title">Ready to discuss your file?</h2>
-          <p class="jks-about-contact__text">
-            {{ site.hours }}<br />
-            {{ site.virtualNote }}
-          </p>
-          <a
-            :href="site.facebookUrl"
-            class="jks-about-contact__link"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Follow us on Facebook
-          </a>
-        </div>
-        <RouterLink to="/book" class="jks-btn jks-btn--primary">{{ site.bookCtaLabel }}</RouterLink>
-      </div>
-    </section>
-
-    <section class="jks-section">
+    <section class="jks-section jks-about-process">
       <div class="jks-container">
         <p class="jks-kicker">How we work</p>
-        <h2 class="jks-heading">Three phases from first call to decision</h2>
-        <p class="jks-lead jks-about-process__intro">{{ about.processIntro }}</p>
+        <h2 class="jks-heading">Three simple steps</h2>
 
         <div class="jks-about-process__grid">
-          <article v-for="step in processSteps" :key="step.step" class="jks-card jks-about-process__card">
+          <article v-for="step in processSteps" :key="step.step" class="jks-about-process__card">
             <span class="jks-about-process__step">{{ step.step }}</span>
             <h3 class="jks-about-process__title">{{ step.title }}</h3>
             <p class="jks-about-process__desc">{{ step.description }}</p>
@@ -98,179 +82,194 @@ import { about, teamMembers, processSteps, site } from '@/config/site.js'
 </template>
 
 <style scoped>
-.jks-about-hero__inner .jks-lead {
-  max-width: 48rem;
-}
-
-.jks-about-split {
+.jks-about-founder__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
 }
 
-.jks-about-split__media img {
-  width: 100%;
-  border-radius: var(--jks-radius-lg);
-  display: block;
-  object-fit: cover;
-}
-
-.jks-about-text {
-  margin: 0 0 1rem;
-  line-height: 1.65;
-  color: #5c5c5c;
-}
-
-.jks-about-highlights {
-  margin: 0 0 1.5rem;
-  padding: 0;
-  list-style: none;
-}
-
-.jks-about-highlights li {
+.jks-about-founder__figure {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #3d3d3d;
-  line-height: 1.5;
+  margin: 0;
 }
 
-.jks-about-highlights li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--jks-brand);
-  font-weight: 700;
-}
-
-.jks-about-team__intro {
-  margin-bottom: 2rem;
-}
-
-.jks-about-team__profile {
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 1.75rem;
-}
-
-.jks-about-team__media img {
+.jks-about-founder__figure img {
   width: 100%;
-  border-radius: var(--jks-radius-lg);
   display: block;
+  border-radius: var(--jks-radius-lg);
+  box-shadow: 0 16px 48px rgba(30, 58, 95, 0.14);
   object-fit: cover;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1024 / 812;
 }
 
-.jks-about-team__body {
-  padding: 0;
+.jks-about-founder__badge {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  background: rgba(30, 58, 95, 0.92);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
 }
 
-.jks-about-team__name {
-  margin: 0 0 0.25rem;
-  font-size: 1.5rem;
+.jks-about-founder__badge-label {
+  font-size: 0.78rem;
   font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.jks-about-team__role {
-  margin: 0 0 0.25rem;
+.jks-about-founder__name {
+  margin-bottom: 0.35rem;
+}
+
+.jks-about-founder__role {
+  margin: 0 0 0.75rem;
   font-weight: 600;
   color: var(--jks-navy);
   font-size: 0.95rem;
 }
 
-.jks-about-team__license {
+.jks-about-founder__tagline {
   margin: 0 0 1rem;
-  font-size: 0.85rem;
-  color: #5c5c5c;
+  font-family: 'PT Serif', Georgia, serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--jks-brand);
+  line-height: 1.4;
 }
 
-.jks-about-team__bio {
-  margin: 0;
+.jks-about-founder__bio {
+  margin: 0 0 1.25rem;
   line-height: 1.65;
-  color: #5c5c5c;
+  color: var(--jks-muted);
+  max-width: 30rem;
   font-size: 0.98rem;
 }
 
-.jks-about-process__intro {
-  margin-bottom: 2rem;
+.jks-about-founder__creds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.jks-about-founder__creds li {
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--jks-navy);
+  background: var(--jks-surface);
+  border: 1px solid var(--jks-border);
+  border-radius: 999px;
+}
+
+.jks-about-pillars {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.jks-about-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.jks-about-pillar {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid var(--jks-border);
+  border-radius: var(--jks-radius);
+}
+
+.jks-about-pillar__icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 10px;
+  background: var(--jks-brand-soft);
+  color: var(--jks-brand);
+  font-size: 0.95rem;
+}
+
+.jks-about-pillar__title {
+  margin: 0 0 0.15rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--jks-ink);
+}
+
+.jks-about-pillar__text {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--jks-muted);
 }
 
 .jks-about-process__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  margin-top: 1.25rem;
 }
 
 .jks-about-process__card {
-  padding: 1.5rem;
+  padding: 1.35rem 1.25rem;
+  background: var(--jks-surface);
+  border: 1px solid var(--jks-border);
+  border-radius: var(--jks-radius);
 }
 
 .jks-about-process__step {
-  display: block;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--jks-brand);
-  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
   margin-bottom: 0.75rem;
+  border-radius: 50%;
+  background: var(--jks-brand);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .jks-about-process__title {
-  margin: 0 0 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
 }
 
 .jks-about-process__desc {
   margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.55;
-  color: #5c5c5c;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--jks-muted);
 }
 
-.jks-about-contact__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  padding: 1.75rem;
-}
-
-.jks-about-contact__title {
-  margin: 0 0 0.35rem;
-  font-size: 1.25rem;
-  font-weight: 700;
-}
-
-.jks-about-contact__text {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: #5c5c5c;
-}
-
-.jks-about-contact__link {
-  color: var(--jks-brand);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.jks-about-contact__link:hover {
-  text-decoration: underline;
-}
-
-@media (max-width: 800px) {
-  .jks-about-split {
+@media (max-width: 900px) {
+  .jks-about-founder__grid {
     grid-template-columns: 1fr;
   }
 
-  .jks-about-team__profile {
-    grid-template-columns: 1fr;
+  .jks-about-pillars__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
+@media (max-width: 600px) {
+  .jks-about-pillars__grid,
   .jks-about-process__grid {
     grid-template-columns: 1fr;
   }

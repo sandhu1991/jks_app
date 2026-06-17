@@ -1,4 +1,6 @@
 <script setup>
+import TrustStats from '@/components/home/TrustStats.vue'
+import PageHero from '@/components/layout/PageHero.vue'
 import {
   site,
   bookPage,
@@ -13,15 +15,13 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-page-hero jks-book-hero">
-      <div class="jks-container">
-        <div class="jks-book-hero__inner">
-          <p class="jks-kicker">Book with JKS</p>
-          <h1 class="jks-heading">{{ bookPage.title }}</h1>
-          <p class="jks-lead">{{ bookPage.intro }}</p>
-        </div>
-      </div>
-    </section>
+    <PageHero
+      :kicker="bookPage.kicker"
+      :title="bookPage.title"
+      :lead="bookPage.lead"
+    />
+
+    <TrustStats />
 
     <section class="jks-section jks-section--muted">
       <div class="jks-container">
@@ -125,10 +125,6 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 </template>
 
 <style scoped>
-.jks-book-hero__inner .jks-lead {
-  max-width: 48rem;
-}
-
 .jks-book-online {
   display: flex;
   align-items: flex-start;

@@ -15,11 +15,19 @@ import AppFooter from '@/components/layout/AppFooter.vue'
 
 <style scoped>
 .jks-app {
-  min-height: 100vh;
+  flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  min-height: 100%;
 }
+
 .jks-main {
-  flex: 1;
+  flex: 1 0 auto;
+}
+
+.jks-app :deep(.site-footer) {
+  flex-shrink: 0;
+  margin-top: auto;
 }
 </style>

@@ -1,10 +1,24 @@
 <script setup>
-import { watch, nextTick } from 'vue'
+import { computed, watch, nextTick } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
+import TrustStats from '@/components/home/TrustStats.vue'
+import PageHero from '@/components/layout/PageHero.vue'
 import { serviceCategories } from '@/config/serviceCatalog.js'
-import { site } from '@/config/site.js'
+import { site, servicesPage } from '@/config/site.js'
 
 const route = useRoute()
+
+const hero = computed(() => {
+  const hub = route.meta.servicesHub
+  if (hub && servicesPage.hubs[hub]) {
+    return servicesPage.hubs[hub]
+  }
+  return {
+    kicker: servicesPage.kicker,
+    title: servicesPage.title,
+    lead: servicesPage.lead,
+  }
+})
 
 function scrollToSection() {
   const id = route.meta.servicesHub || (route.hash ? route.hash.slice(1) : null)
@@ -27,16 +41,13 @@ function topicSummary(intro) {
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-page-hero jks-services-hero">
-      <div class="jks-container jks-services-hero__inner">
-        <p class="jks-kicker">What we do</p>
-        <h1 class="jks-heading">Immigration services</h1>
-        <p class="jks-lead">
-          From temporary visas to permanent residence, citizenship, and permit extensions — browse every
-          pathway we support and open the guide that fits your situation.
-        </p>
-      </div>
-    </section>
+    <PageHero
+      :kicker="hero.kicker"
+      :title="hero.title"
+      :lead="hero.lead"
+    />
+
+    <TrustStats />
 
     <nav class="jks-services-jump" aria-label="Service categories">
       <div class="jks-container jks-services-jump__inner">
@@ -115,10 +126,6 @@ function topicSummary(intro) {
 <style scoped>
 .jks-services-category {
   scroll-margin-top: 5.5rem;
-}
-
-.jks-services-hero__inner .jks-lead {
-  max-width: none;
 }
 
 .jks-services-jump {

@@ -45,7 +45,8 @@ const footerLinks = [
 
 <style scoped>
 .site-footer {
-  padding: 2.75rem 1.5rem 1.75rem;
+  margin: 0;
+  padding: 3.25rem 1.5rem 2rem;
   background: #0f1f33;
   color: #e8edf3;
 }
@@ -56,7 +57,7 @@ const footerLinks = [
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.85rem;
+  gap: 1.15rem;
 }
 
 .footer-brand {
@@ -102,8 +103,8 @@ const footerLinks = [
 
 .footer-copy {
   width: 100%;
-  margin: 0.5rem 0 0;
-  padding: 1rem 0 0;
+  margin: 0.75rem 0 0;
+  padding: 1.25rem 0 0;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 0.75rem;
   color: #9aabb8;

@@ -34,6 +34,13 @@ export const site = {
   reviewCtaLabel: 'Write us a review',
 }
 
+export const contactPage = {
+  kicker: 'Contact JKS Immigration',
+  title: 'We are here to help',
+  lead: 'Email, phone, or WhatsApp — we reply within one business day.',
+}
+
+
 export const trustStats = [
   { value: '100+', label: 'Cases served' },
   { value: '2+', label: 'Years of service' },
@@ -177,56 +184,49 @@ export const whyChoose = [
 ]
 
 export const about = {
-  missionTitle: 'Helping families and professionals build a life in Canada',
-  missionText:
-    'At JKS Immigration we believe immigration should be understandable — not overwhelming. We take time to explain your options, flag risks early, and walk with you from the first conversation through to a decision on your file.',
-  introTitle: 'Immigration consulting with personal attention',
-  introText:
-    'Based in Quebec, JKS Immigration assists clients across Canada and overseas with temporary and permanent immigration matters. Whether you are a student, skilled worker, or sponsoring a loved one, we provide hands-on guidance and focus on accurate filings and realistic expectations.',
-  accreditation:
-    'Jasmine Kaur, our founder, holds an active RCIC licence (R731629) with the College of Immigration and Citizenship Consultants (CICC). That regulation is your assurance that advice and representation meet Canadian professional standards.',
-  teamIntro:
-    'Behind every application is a consultant who knows the forms, the policy updates, and the stakes for your family or career.',
-  processIntro:
-    'We break the journey into three clear phases so you always know what happens next and what we need from you.',
-  image: '/images/about/girl-and-world.jpg',
-  highlights: [
-    'Consultations by appointment via Zoom or Google Meet',
-    'Remote meetings via Zoom, Google Meet, and video call',
-    'Support in English — ask us about French-language needs',
-    'Coverage across visitor, study, work, PR, and citizenship files',
+  missionTitle: 'Immigration advice you can trust',
+  missionText: 'Regulated consulting for families and professionals — clear, honest, and personal.',
+  pillars: [
+    { icon: 'fa-user-shield', title: 'RCIC-regulated', text: 'Licensed & accountable' },
+    { icon: 'fa-video', title: 'Online sessions', text: 'Zoom & Google Meet' },
+    { icon: 'fa-file-circle-check', title: 'Hands-on files', text: 'Not a call centre' },
+    { icon: 'fa-globe', title: 'Canada-wide', text: 'Home & abroad' },
   ],
 }
 
 export const teamMembers = [
   {
     name: 'Jasmine Kaur',
-    role: 'Founder & Regulated Canadian Immigration Consultant (RCIC)',
-    license: 'Licence R731629 · CICC',
+    role: 'Founder & Regulated Canadian Immigration Consultant',
+    license: 'RCIC R731629',
+    tagline: 'Your journey. Our expertise. Your future.',
+    credentials: [
+      'CICC member',
+      "Queen's University — Immigration Law",
+      'Commissioner for Oaths',
+      'IRB licensed',
+    ],
     bio:
-      'Jasmine founded JKS Immigration to offer hands-on, ethical consulting for families and professionals navigating Canadian immigration. She holds an active RCIC licence (R731629) and completed her Graduate Diploma in Immigration and Citizenship Law at Queen\'s University in 2023, strengthening her expertise in immigration law, policy, and application strategy. She manages complex files personally — from visitor and study permits to spousal sponsorship and permanent residence — and is known for clear explanations, careful document review, and quick, thorough responses to client questions.',
-    image: '/images/about/jasmine-kaur.jpg',
+      'Jasmine leads every file personally — study permits, sponsorship, and permanent residence — with plain-language guidance and careful document review.',
+    image: '/images/about/jasmine-kaur.png',
   },
 ]
 
 export const processSteps = [
   {
     step: '1',
-    title: 'Initial consultation',
-    description:
-      'Book a video consultation to discuss your situation. We meet by Zoom or Google Meet and explain documents, fees, and timelines.',
+    title: 'Consult',
+    description: 'Book online. We review your situation and outline realistic options.',
   },
   {
     step: '2',
-    title: 'Strategy & checklist',
-    description:
-      'You receive a tailored action plan — forms, evidence, and deadlines — so nothing important is missed before submission.',
+    title: 'Plan',
+    description: 'You get a tailored checklist — forms, evidence, and deadlines.',
   },
   {
     step: '3',
-    title: 'Submission & follow-up',
-    description:
-      'We prepare or review your application, submit on your behalf where authorized, and track correspondence until IRCC decides.',
+    title: 'Submit',
+    description: 'We prepare your file, submit where authorized, and track until IRCC decides.',
   },
 ]
 
@@ -244,11 +244,34 @@ export function bookLink({ title, calSlug, bookingUrl }) {
 }
 
 export const bookPage = {
-  title: 'Book a Consultation',
-  intro:
-    'All sessions are by appointment only — online via Zoom or Google Meet or Cal Video with a CICC Licensed RCIC, Jasmine Kaur.',
+  kicker: 'Book with JKS Immigration',
+  title: 'Start with a consultation',
+  lead: 'Virtual sessions with RCIC Jasmine Kaur — pick a package and choose your time.',
   onlineNote:
-    'Virtual appointments only. Select a package, pay securely online, and choose your preferred time slot.',
+    'All appointments are online via Zoom, Google Meet, or Cal Video. Pay securely and select your slot.',
+}
+
+export const servicesPage = {
+  kicker: 'Our services',
+  title: 'Your pathway to Canada',
+  lead: 'Visitor visas, permanent residence, citizenship, and extensions — open the guide that fits your goals.',
+  hubs: {
+    immigration: {
+      kicker: 'Permanent residence',
+      title: 'Immigrate to Canada',
+      lead: 'Express Entry, provincial nominees, family sponsorship, and business immigration.',
+    },
+    visas: {
+      kicker: 'Temporary status',
+      title: 'Canada visas & permits',
+      lead: 'Visitor, study, work, and super visas for you and your family.',
+    },
+    'other-services': {
+      kicker: 'Other services',
+      title: 'Citizenship, PR cards & extensions',
+      lead: 'PR card renewal, citizenship, and permit extensions when your status needs updating.',
+    },
+  },
 }
 
 export const bookFeaturedPackage = {

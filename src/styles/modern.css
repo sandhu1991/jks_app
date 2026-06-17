@@ -213,7 +213,11 @@
   text-align: left;
   margin-left: 0;
   margin-right: 0;
-  max-width: 48rem;
+  max-width: 36rem;
+}
+
+.jks-page-hero__inner .jks-lead {
+  max-width: 36rem;
 }
 
 .jks-page-hero .jks-kicker,
