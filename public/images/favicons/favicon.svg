@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="JKS Immigration">
+  <defs>
+    <linearGradient id="plane-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="#1e3a5f"/>
+  <!-- Bold upward plane — fills ~80% of canvas like Gmail / Rivergate marks -->
+  <g transform="translate(256 268) scale(17.5)">
+    <path
+      fill="#ffffff"
+      transform="translate(-12 -13)"
+      d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+    />
+  </g>
+</svg>
