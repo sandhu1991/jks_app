@@ -12,10 +12,6 @@ npm run build    # output in dist/
 npm run deploy   # build + wrangler deploy
 ```
 
-## Images
-
-Site images live in `public/images/`. Run `node scripts/prune-unused-images.mjs` to remove unreferenced files after changes.
-
 ## Deploying
 
 The app uses HTML5 history mode. Production uses `wrangler.toml` with SPA fallback (`not_found_handling = "single-page-application"`).
