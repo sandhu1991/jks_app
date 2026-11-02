@@ -8,6 +8,7 @@
       "lastVerified": "November 2026",
       "intro": "Immigration, Refugees and Citizenship Canada (IRCC) manages Canada’s federal immigration and temporary-residence programs. Explore the official program pages below before making plans or submitting an application.",
       "drawUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html",
+      "drawStream": "Express Entry",
       "drawTitle": "Express Entry invitation rounds",
       "drawDescription": "View current rounds, invitations and CRS cut-off scores",
       "streams": [
@@ -44,9 +45,15 @@
           "status": "Active"
         },
         {
-          "name": "Study permits and PGWP",
-          "summary": "Study-permit information and post-graduation work-permit guidance.",
+          "name": "Study permits",
+          "summary": "Study-permit eligibility, application and study-in-Canada guidance.",
           "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html",
+          "status": "Active"
+        },
+        {
+          "name": "Post-Graduation Work Permit (PGWP)",
+          "summary": "Official post-graduation work permit eligibility and application guidance for eligible graduates.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/about.html",
           "status": "Active"
         },
         {
