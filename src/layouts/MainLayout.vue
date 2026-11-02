@@ -1,6 +1,10 @@
 <script setup>
+import { useRoute } from 'vue-router'
 import Header from '@/components/layout/Header.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
+import BookCtaBand from '@/components/common/BookCtaBand.vue'
+
+const route = useRoute()
 </script>
 
 <template>
@@ -9,6 +13,7 @@ import AppFooter from '@/components/layout/AppFooter.vue'
     <main id="main" class="jks-main">
       <router-view />
     </main>
+    <BookCtaBand v-if="route.name !== 'home'" standalone />
     <AppFooter />
   </div>
 </template>

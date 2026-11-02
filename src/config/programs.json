@@ -1,0 +1,1034 @@
+{
+  "programs": {
+    "federal": {
+      "name": "Federal immigration programs",
+      "code": "IRCC",
+      "jurisdiction": "Canada",
+      "officialUrl": "https://www.canada.ca/en/immigration-refugees-citizenship.html",
+      "lastVerified": "November 2026",
+      "intro": "Immigration, Refugees and Citizenship Canada (IRCC) manages Canada’s federal immigration and temporary-residence programs. Explore the official program pages below before making plans or submitting an application.",
+      "drawUrl": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html",
+      "drawTitle": "Express Entry invitation rounds",
+      "drawDescription": "View current rounds, invitations and CRS cut-off scores",
+      "streams": [
+        {
+          "name": "Express Entry",
+          "summary": "Canada’s online system for managing permanent-residence applications from skilled workers.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html",
+          "status": "Active",
+          "substreams": [
+            {
+              "name": "Canadian Experience Class",
+              "status": "Active",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/canadian-experience-class.html",
+              "summary": "For skilled workers with eligible Canadian work experience."
+            },
+            {
+              "name": "Federal Skilled Worker Program",
+              "status": "Active",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-workers.html",
+              "summary": "For skilled workers with eligible foreign or Canadian work experience."
+            },
+            {
+              "name": "Federal Skilled Trades Program",
+              "status": "Active",
+              "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/who-can-apply/federal-skilled-trades.html",
+              "summary": "For skilled workers qualified in an eligible skilled trade."
+            }
+          ]
+        },
+        {
+          "name": "Work permits",
+          "summary": "Work authorization options, including employer-specific and open work permits.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada.html",
+          "status": "Active"
+        },
+        {
+          "name": "Study permits and PGWP",
+          "summary": "Study-permit information and post-graduation work-permit guidance.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html",
+          "status": "Active"
+        },
+        {
+          "name": "Super Visa",
+          "summary": "Longer-term visitor options for parents and grandparents of Canadian citizens or permanent residents.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada/parent-grandparent-super-visa.html",
+          "status": "Active"
+        },
+        {
+          "name": "Visitor visas",
+          "summary": "Visitor visa and electronic travel authorization information for temporary visits to Canada.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/visit-canada.html",
+          "status": "Active"
+        },
+        {
+          "name": "Family sponsorship",
+          "summary": "Sponsorship options for spouses, partners, dependent children, parents and grandparents.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship.html",
+          "status": "Active"
+        },
+        {
+          "name": "Permanent residence and PR cards",
+          "summary": "Permanent-residence pathways, PR-card renewal, replacement and travel-document information.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html",
+          "status": "Active"
+        },
+        {
+          "name": "Canadian citizenship",
+          "summary": "Eligibility and application guidance for Canadian citizenship.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-citizenship.html",
+          "status": "Active"
+        },
+        {
+          "name": "Refugee and humanitarian measures",
+          "summary": "Official information for people seeking protection or affected by humanitarian public policies.",
+          "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/refugees.html",
+          "status": "Active"
+        }
+      ]
+    },
+    "ontario": {
+      "name": "Ontario Immigrant Nominee Program",
+      "code": "OINP",
+      "jurisdiction": "Ontario",
+      "officialUrl": "https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp",
+      "lastVerified": "November 2026",
+      "intro": "Ontario administers provincial immigration pathways through the Ontario Immigrant Nominee Program. Program availability can change, so applicants should confirm the current pathway and requirements directly with Ontario before taking action.",
+      "drawUrl": "https://www.ontario.ca/page/invitations-apply-oinp?redirect_id=page%2Fontario-immigrant-nominee-program-oinp-invitations-apply",
+      "drawTitle": "OINP invitations to apply",
+      "drawDescription": "View Ontario invitation rounds and draw information",
+      "streams": [
+        {
+          "name": "Ontario Workforce Priority Stream",
+          "summary": "Ontario’s currently active provincial immigration stream in this monitored program list.",
+          "url": "https://www.ontario.ca/page/ontario-workforce-priority-stream",
+          "status": "Active"
+        },
+        {
+          "name": "Ontario Immigrant Nominee Program updates",
+          "summary": "Previous OINP program framework. Refer to Ontario’s current program information for available pathways.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Employer Job Offer: Foreign Worker Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Employer Job Offer: International Student Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Employer Job Offer: In-Demand Skills Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Express Entry: Human Capital Priorities Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Express Entry: French-Speaking Skilled Worker Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Express Entry: Skilled Trades Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Masters Graduate Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "PhD Graduate Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        },
+        {
+          "name": "Entrepreneur Stream",
+          "summary": "This monitored stream is currently closed. Check Ontario’s official page for current options.",
+          "url": null,
+          "status": "Deprecated"
+        }
+      ]
+    },
+    "alberta": {
+      "name": "Alberta Advantage Immigration Program",
+      "code": "AAIP",
+      "jurisdiction": "Alberta",
+      "officialUrl": "https://www.alberta.ca/alberta-advantage-immigration-program",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Alberta immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": "https://www.alberta.ca/aaip-processing-information#jumplinks-10",
+      "drawTitle": "AAIP draws and processing information",
+      "drawDescription": "View Alberta Advantage Immigration Program invitation rounds",
+      "streams": [
+        {
+          "name": "Alberta Opportunity Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/aaip-alberta-opportunity-stream",
+          "summary": "Review official AAIP information for current eligibility, availability and application instructions."
+        },
+        {
+          "name": "Alberta Express Entry Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/aaip-alberta-express-entry-stream",
+          "summary": "For eligible candidates in the federal Express Entry pool, including dedicated provincial pathways.",
+          "substreams": [
+            {
+              "name": "Dedicated Health Care Pathway",
+              "status": "Active",
+              "url": "https://www.alberta.ca/dedicated-health-care-pathway",
+              "summary": "For eligible health-care professionals with an Alberta job offer; Express Entry and non-Express Entry options are available."
+            },
+            {
+              "name": "Accelerated Tech Pathway",
+              "status": "Active",
+              "url": "https://www.alberta.ca/aaip-alberta-express-entry-stream-eligibility",
+              "summary": "For eligible technology workers with an Alberta job offer in an eligible tech occupation."
+            },
+            {
+              "name": "Law Enforcement Pathway",
+              "status": "Active",
+              "url": "https://www.alberta.ca/aaip-alberta-express-entry-stream-eligibility",
+              "summary": "For internationally recruited police officers with an eligible Alberta police-service job offer."
+            },
+            {
+              "name": "Priority sectors",
+              "status": "Active",
+              "url": "https://www.alberta.ca/aaip-alberta-express-entry-stream",
+              "summary": "Selection priorities may include eligible candidates whose experience supports Alberta labour needs in sectors such as construction, agriculture and aviation."
+            }
+          ]
+        },
+        {
+          "name": "Rural Renewal Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/aaip-rural-renewal-stream",
+          "summary": "Review official AAIP information for current eligibility, availability and application instructions."
+        },
+        {
+          "name": "Tourism and Hospitality Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/tourism-and-hospitality-stream",
+          "summary": "Review official AAIP information for current eligibility, availability and application instructions."
+        },
+        {
+          "name": "Rural Entrepreneur Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/aaip-rural-entrepreneur-stream",
+          "summary": "Review official AAIP information for current eligibility, availability and application instructions."
+        },
+        {
+          "name": "Graduate Entrepreneur Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/aaip-graduate-entrepreneur-stream",
+          "summary": "Review official AAIP information for current eligibility, availability and application instructions."
+        },
+        {
+          "name": "Foreign Graduate Entrepreneur Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/aaip-foreign-graduate-entrepreneur-stream",
+          "summary": "Review official AAIP information for current eligibility, availability and application instructions."
+        },
+        {
+          "name": "Farm Stream",
+          "status": "Active",
+          "url": "https://www.alberta.ca/aaip-farm-stream",
+          "summary": "Review official AAIP information for current eligibility, availability and application instructions."
+        }
+      ]
+    },
+    "britishColumbia": {
+      "name": "British Columbia Provincial Nominee Program",
+      "code": "BC PNP",
+      "jurisdiction": "British Columbia",
+      "officialUrl": "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/the-bc-provincial-nominee-program",
+      "lastVerified": "November 2026",
+      "intro": "Explore official British Columbia immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": "https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/invitations-to-apply",
+      "drawTitle": "BC PNP invitations to apply",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+          "name": "Skills Immigration",
+          "status": "Active",
+          "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-workers",
+          "summary": "Worker pathways for eligible candidates with a qualifying B.C. job offer.",
+          "substreams": [
+            {
+              "name": "Skilled Worker Stream",
+              "status": "Active",
+              "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-workers",
+              "summary": "For experienced managers, professionals, skilled tradespeople and other eligible workers with a qualifying B.C. job offer."
+            },
+            {
+              "name": "Health Authority Stream",
+              "status": "Active",
+              "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-workers",
+              "summary": "For eligible health workers with a qualifying job offer from a B.C. provincial health authority."
+            },
+            {
+              "name": "International Graduate Stream",
+              "status": "Deprecated",
+              "url": null,
+              "summary": "This former Skills Immigration stream is no longer listed among B.C.'s current worker pathways."
+            },
+            {
+              "name": "International Post-Graduate Stream",
+              "status": "Deprecated",
+              "url": null,
+              "summary": "This former Skills Immigration stream is no longer listed among B.C.'s current worker pathways."
+            },
+            {
+              "name": "Entry Level and Semi-Skilled Stream",
+              "status": "Deprecated",
+              "url": null,
+              "summary": "This former Skills Immigration stream is no longer listed among B.C.'s current worker pathways."
+            }
+          ]
+        },
+        {
+          "name": "Entrepreneur Immigration",
+          "status": "Active",
+          "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-entrepreneurs-and-businesses",
+          "summary": "Business immigration pathways for entrepreneurs and foreign corporations.",
+          "substreams": [
+            {
+              "name": "Entrepreneur Immigration — Base Stream",
+              "status": "Active",
+              "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-entrepreneurs-and-businesses",
+              "summary": "For experienced entrepreneurs who will establish or take over and grow an eligible business in British Columbia."
+            },
+            {
+              "name": "Entrepreneur Immigration — Regional Stream",
+              "status": "Active",
+              "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-entrepreneurs-and-businesses",
+              "summary": "For entrepreneurs who will establish a business in a participating regional B.C. community."
+            },
+            {
+              "name": "Strategic Projects Stream",
+              "status": "Active",
+              "url": "https://www.welcomebc.ca/immigrate-to-b-c/for-entrepreneurs-and-businesses",
+              "summary": "For foreign corporations establishing or expanding operations in British Columbia and proposing key staff for nomination."
+            }
+          ]
+        }
+      ]
+    },
+    "manitoba": {
+      "name": "Manitoba Provincial Nominee Program",
+      "code": "MPNP",
+      "jurisdiction": "Manitoba",
+      "officialUrl": "https://immigratemanitoba.com/mpnp/",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Manitoba immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": "https://immigratemanitoba.com/draws/",
+      "drawTitle": "MPNP draws",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+          "name": "Skilled Worker Stream",
+          "status": "Active",
+          "url": "https://immigratemanitoba.com/mpnp/skilled-worker/",
+          "summary": "For internationally trained and experienced workers needed in Manitoba’s labour market.",
+          "substreams": [
+            {
+              "name": "Skilled Worker in Manitoba",
+              "status": "Active",
+              "url": "https://immigratemanitoba.com/mpnp/skilled-worker/swm/eligibility/",
+              "summary": "For skilled workers with established, ongoing employment in Manitoba and a qualifying long-term job offer."
+            },
+            {
+              "name": "Skilled Worker Overseas",
+              "status": "Active",
+              "url": "https://immigratemanitoba.com/mpnp/skilled-worker/swo/",
+              "summary": "For internationally trained skilled workers outside Manitoba who can demonstrate an eligible connection to the province."
+            }
+          ]
+        },
+        {
+          "name": "International Education Stream",
+          "status": "Active",
+          "url": "https://immigratemanitoba.com/mpnp/ies/",
+          "summary": "For eligible Manitoba graduates through pathways designed to support the province’s labour-market needs.",
+          "substreams": [
+            {
+              "name": "Career Employment Pathway",
+              "status": "Active",
+              "url": "https://immigratemanitoba.com/mpnp/ies/cep/",
+              "summary": "For eligible Manitoba graduates with a qualifying long-term job in an in-demand occupation."
+            },
+            {
+              "name": "Graduate Internship Pathway",
+              "status": "Active",
+              "url": "https://immigratemanitoba.com/mpnp/ies/gip/",
+              "summary": "For eligible Manitoba master’s and doctoral graduates who completed a qualifying Mitacs internship."
+            },
+            {
+              "name": "International Student Entrepreneur Pilot",
+              "status": "Active",
+              "url": "https://immigratemanitoba.com/mpnp/ies/isep/",
+              "summary": "For eligible Manitoba graduates pursuing entrepreneurship rather than employment."
+            }
+          ]
+        },
+        {
+          "name": "Business Investor Stream",
+          "status": "Active",
+          "url": "https://immigratemanitoba.com/mpnp/bis/",
+          "summary": "For qualified entrepreneurs and investors establishing or purchasing a business or farm operation in Manitoba.",
+          "substreams": [
+            {
+              "name": "Entrepreneur Pathway",
+              "status": "Active",
+              "url": "https://immigratemanitoba.com/mpnp/bis/ep/",
+              "summary": "For qualified applicants who will open or purchase a business in Manitoba."
+            },
+            {
+              "name": "Farm Investor Pathway",
+              "status": "Active",
+              "url": "https://immigratemanitoba.com/immigrate/bis/fip/",
+              "summary": "For experienced farmers who will establish and operate a farm in rural Manitoba."
+            }
+          ]
+        }
+      ]
+    },
+    "newBrunswick": {
+      "name": "New Brunswick Immigration",
+      "code": "NBPNP",
+      "jurisdiction": "New Brunswick",
+      "officialUrl": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program.html",
+      "lastVerified": "November 2026",
+      "intro": "Explore official New Brunswick immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": "https://www.gnb.ca/en/topic/family-home-community/immigration/invitation-selection-rounds.html",
+      "drawTitle": "New Brunswick invitation rounds",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+          "name": "New Brunswick Skilled Worker Stream",
+          "status": "Active",
+          "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/skilled-worker-stream.html",
+          "summary": "For people working in New Brunswick or with a qualifying full-time, non-seasonal job offer from an eligible New Brunswick employer.",
+          "substreams": [
+            {
+              "name": "New Brunswick Experience",
+              "status": "Active",
+              "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/skilled-worker-stream.html",
+              "summary": "For eligible candidates who have established work experience with their supporting New Brunswick employer."
+            },
+            {
+              "name": "New Brunswick Graduates",
+              "status": "Active",
+              "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/skilled-worker-stream.html",
+              "summary": "For eligible graduates of a New Brunswick designated learning institution."
+            },
+            {
+              "name": "New Brunswick Priority Occupations",
+              "status": "Active",
+              "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/skilled-worker-stream.html",
+              "summary": "For eligible candidates with a qualifying job offer obtained through a Government of New Brunswick recruitment mission."
+            }
+          ]
+        },
+        {
+          "name": "New Brunswick Express Entry Stream",
+          "status": "Active",
+          "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/express-entry-stream.html",
+          "summary": "For highly skilled candidates in the federal Express Entry pool who meet New Brunswick’s criteria.",
+          "substreams": [
+            {
+              "name": "Employment in New Brunswick",
+              "status": "Active",
+              "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/express-entry-stream.html",
+              "summary": "For eligible Express Entry candidates who have been living and working full-time in New Brunswick."
+            },
+            {
+              "name": "New Brunswick Interest",
+              "status": "Active",
+              "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/express-entry-stream.html",
+              "summary": "For eligible candidates who have received a letter of interest in their federal Express Entry profile."
+            }
+          ]
+        },
+        {
+          "name": "New Brunswick Strategic Initiative",
+          "status": "Active",
+          "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/strategic-initiative.html",
+          "summary": "A Francophone-focused immigration stream with pathways selected by Immigration New Brunswick.",
+          "substreams": [
+            {
+              "name": "Francophone Workers in New Brunswick",
+              "status": "Active",
+              "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/strategic-initiative.html",
+              "summary": "For eligible French-speaking workers already established in New Brunswick."
+            },
+            {
+              "name": "New Brunswick Francophone Priorities",
+              "status": "Active",
+              "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/strategic-initiative.html",
+              "summary": "For eligible French-speaking candidates selected under provincial priorities."
+            }
+          ]
+        },
+        {
+          "name": "New Brunswick Business Immigration Stream",
+          "status": "Active",
+          "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/business-immigration-stream.html",
+          "summary": "For entrepreneurs who will start or buy and actively manage an eligible business in New Brunswick."
+        },
+        {
+          "name": "New Brunswick Critical Worker Pilot",
+          "status": "Active",
+          "url": "https://www2.gnb.ca/content/gnb/en/corporate/promo/immigration/immigrating-to-nb/nb-immigration-program-streams/nb-critical-workers-pilot.html",
+          "summary": "A pilot addressing critical labour shortages through participating New Brunswick employers."
+        },
+        {
+          "name": "Private Career College Graduate Pilot Program",
+          "status": "Active",
+          "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/provincial-nominee-program/pccg-pilot-program.html",
+          "summary": "For eligible graduates of participating New Brunswick private career-college programs."
+        },
+        {
+          "name": "Atlantic Immigration Program",
+          "status": "Active",
+          "url": "https://www.gnb.ca/en/topic/family-home-community/immigration/atlantic-immigration-program.html",
+          "summary": "A separate federal-provincial program supporting eligible candidates through designated New Brunswick employers."
+        }
+      ]
+    },
+    "newfoundlandLabrador": {
+      "name": "Newfoundland and Labrador Immigration",
+      "code": "NLPNP",
+      "jurisdiction": "Newfoundland and Labrador",
+      "officialUrl": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Newfoundland and Labrador immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": "https://www.gov.nl.ca/immigration/invitations-to-apply-updates/",
+      "drawTitle": "NLPNP invitations to apply",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+          "name": "Express Entry Skilled Worker",
+          "status": "Active",
+          "url": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/applicants/express-entry-skilled-worker/",
+      "summary": "For skilled workers in the federal Express Entry pool with an eligible full-time job offer in Newfoundland and Labrador."
+        },
+        {
+          "name": "Skilled Worker",
+          "status": "Active",
+      "url": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/applicants/skilled-worker/",
+      "summary": "For skilled workers with an eligible full-time job offer from a Newfoundland and Labrador employer."
+        },
+        {
+          "name": "International Graduate",
+          "status": "Active",
+      "url": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/applicants/international-graduate/",
+      "summary": "For eligible graduates with a valid post-graduation work permit and a qualifying job offer."
+        },
+        {
+          "name": "International Entrepreneur",
+          "status": "Active",
+      "url": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/entrepreneurs/international-entrepreneur/overview/",
+      "summary": "For experienced business owners or senior managers who plan to establish or buy and actively manage a business in the province."
+        },
+        {
+          "name": "International Graduate Entrepreneur",
+          "status": "Active",
+      "url": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/provincial-nominee-program/entrepreneurs/international-graduate-entrepreneur/overview/",
+      "summary": "For eligible Memorial University or College of the North Atlantic graduates who own and actively manage a local business."
+        },
+        {
+          "name": "Atlantic Immigration Program",
+          "status": "Active",
+      "url": "https://www.gov.nl.ca/immigration/immigrating-to-newfoundland-and-labrador/atlantic-immigration-program/overview/",
+      "summary": "An employer-driven pathway for eligible skilled workers and international graduates with a designated Newfoundland and Labrador employer."
+        }
+      ]
+    },
+    "northwestTerritories": {
+      "name": "Northwest Territories Nominee Program",
+      "code": "NTNP",
+      "jurisdiction": "Northwest Territories",
+      "officialUrl": "https://www.immigratenwt.ca/",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Northwest Territories immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": "https://www.immigratenwt.ca/expression-interest",
+      "drawTitle": "Northwest Territories Expression of Interest",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+      "name": "Employer-Driven Stream",
+          "status": "Active",
+          "url": "https://www.immigratenwt.ca/",
+      "summary": "An employer-led stream with three categories for eligible workers with a qualifying Northwest Territories employer.",
+      "substreams": [
+        {
+          "name": "Entry Level / Semi-Skilled Occupations",
+          "status": "Active",
+          "url": "https://www.immigratenwt.ca/entry-levelsemi-skilled-occupations",
+          "summary": "For eligible workers in NOC TEER 4 or 5 occupations who have worked full-time for their NWT employer for at least 12 months."
+        },
+        {
+          "name": "Skilled Worker",
+          "status": "Active",
+          "url": "https://www.immigratenwt.ca/skilled-worker",
+          "summary": "For eligible workers in NOC TEER 0, 1, 2 or 3 occupations with the required training, experience and education."
+        },
+        {
+          "name": "NWT Express Entry",
+          "status": "Active",
+          "url": "https://www.immigratenwt.ca/nwt-express-entry",
+          "summary": "For skilled workers with a federal Express Entry profile and a qualifying NWT job offer."
+        }
+      ]
+        },
+        {
+          "name": "Business Stream",
+          "status": "Active",
+      "url": "https://www.immigratenwt.ca/business-stream",
+      "summary": "For eligible entrepreneurs who will start, buy or invest in and actively operate a business in the Northwest Territories."
+        },
+        {
+          "name": "Francophone Stream",
+          "status": "Active",
+      "url": "https://www.immigratenwt.ca/francophone-stream",
+      "summary": "For eligible bilingual workers with a qualifying NWT employer and required English and French language proficiency."
+        }
+      ]
+    },
+    "novaScotia": {
+      "name": "Nova Scotia Immigration",
+      "code": "NSNP",
+      "jurisdiction": "Nova Scotia",
+      "officialUrl": "https://liveinnovascotia.com/nova-scotia-nominee-program",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Nova Scotia immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": null,
+      "drawTitle": "Official immigration draws",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+      "name": "Nova Scotia Graduate",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/nova-scotia-graduate",
+      "summary": "For eligible recent international graduates whose education and job offer align with the province’s currently listed occupations.",
+      "substreams": [
+        {
+          "name": "International Graduates in Demand",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/nova-scotia-graduate",
+          "summary": "Eligibility formerly covered by this stream is now included in Nova Scotia Graduate."
+        }
+      ]
+        },
+        {
+      "name": "Skilled Worker",
+          "status": "Active",
+      "url": "https://liveinnovascotia.com/skilled-worker",
+      "summary": "For employers recruiting eligible foreign workers and recent international graduates for needed jobs in Nova Scotia.",
+      "substreams": [
+        {
+          "name": "Construction",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/skilled-worker",
+          "summary": "For eligible workers with a qualifying full-time construction-sector job offer in a listed occupation."
+        },
+        {
+          "name": "Physicians",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/skilled-worker",
+          "summary": "For eligible physicians with an approved opportunity from Nova Scotia Health Authority or IWK Health."
+        },
+        {
+          "name": "Occupations in Demand",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/skilled-worker",
+          "summary": "This sub-criteria remains part of Skilled Worker; the official page currently lists no eligible occupations."
+        }
+      ]
+        },
+        {
+      "name": "Entrepreneur",
+          "status": "Active",
+      "url": "https://liveinnovascotia.com/entrepreneur",
+      "summary": "For eligible entrepreneurs who will establish or buy and actively manage a business in Nova Scotia.",
+      "substreams": [
+        {
+          "name": "Entrepreneur",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/entrepreneur#tab-0",
+          "summary": "For eligible experienced business owners or senior managers who will establish or buy and actively manage a Nova Scotia business."
+        },
+        {
+          "name": "International Graduate Entrepreneur",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/entrepreneur",
+          "summary": "For eligible Nova Scotia post-secondary graduates who already own and actively manage a Nova Scotia business."
+        }
+      ]
+    },
+    {
+      "name": "Nova Scotia: Express Entry",
+      "status": "Active",
+      "url": "https://liveinnovascotia.com/express-entry",
+      "summary": "For eligible skilled candidates in the federal Express Entry system who intend to live permanently in Nova Scotia.",
+      "substreams": [
+        {
+          "name": "Skilled Work Experience in Nova Scotia",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/express-entry",
+          "summary": "For eligible Express Entry candidates with at least one year of skilled work experience in Nova Scotia."
+        },
+        {
+          "name": "Physicians",
+          "status": "Active",
+          "url": "https://liveinnovascotia.com/express-entry",
+          "summary": "For eligible physicians with an approved Nova Scotia health authority opportunity and a provincial Letter of Interest."
+        }
+      ]
+        },
+        {
+          "name": "Atlantic Immigration Program",
+          "status": "Active",
+      "url": "https://liveinnovascotia.com/atlantic-immigration-program",
+      "summary": "A federal employer-driven pathway for eligible skilled foreign workers and international graduates with a designated Nova Scotia employer."
+        }
+      ]
+    },
+    "princeEdwardIsland": {
+      "name": "Prince Edward Island Office of Immigration",
+      "code": "PEI PNP",
+      "jurisdiction": "Prince Edward Island",
+      "officialUrl": "https://www.princeedwardisland.ca/en/topic/office-immigration",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Prince Edward Island immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": "https://www.princeedwardisland.ca/en/information/office-of-immigration/expression-of-interest-draws",
+      "drawTitle": "PEI Expression of Interest draws",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+      "name": "PEI Express Entry",
+          "status": "Active",
+      "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/pei-express-entry",
+      "summary": "For eligible candidates in the federal Express Entry pool who meet PEI nomination requirements."
+        },
+        {
+      "name": "Workforce Category",
+          "status": "Active",
+      "url": "https://www.princeedwardisland.ca/en/topic/immigrate-to-pei-as-a-worker",
+      "summary": "Employer-driven pathways for eligible foreign workers and graduates filling long-term labour needs in Prince Edward Island.",
+      "substreams": [
+        {
+          "name": "Skilled Worker",
+          "status": "Active",
+          "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/skilled-workers-in-pei",
+          "summary": "For eligible workers with a PEI employer job offer in a high-skilled TEER 0, 1, 2 or 3 occupation."
+        },
+        {
+          "name": "Critical Worker",
+          "status": "Active",
+          "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/critical-workers",
+          "summary": "For eligible workers already employed full-time in PEI in a qualifying intermediate-skilled TEER 4 or 5 position."
+        },
+        {
+          "name": "International Graduate",
+          "status": "Active",
+          "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/international-graduates",
+          "summary": "For eligible graduates of a publicly funded PEI post-secondary institution with a qualifying PEI job offer."
+        },
+        {
+          "name": "Intermediate Experience",
+          "status": "Active",
+          "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/intermediate-experience-stream",
+          "summary": "For eligible workers in qualifying TEER 4 positions, including certain employer-authorized recruitment outside PEI."
+        },
+        {
+          "name": "Occupations in Demand",
+          "status": "Active",
+          "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/occupations-in-demand",
+          "summary": "For eligible workers with a PEI job offer in one of the province’s listed in-demand occupations."
+        }
+      ]
+        },
+        {
+      "name": "Work Permit Stream",
+          "status": "Active",
+      "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/work-permit-stream",
+      "summary": "For eligible entrepreneurs who plan to establish and actively manage a PEI business before nomination."
+        },
+        {
+          "name": "Atlantic Immigration Program",
+          "status": "Active",
+      "url": "https://www.princeedwardisland.ca/en/information/office-of-immigration/atlantic-immigration-program-endorsement",
+      "summary": "An employer-driven federal pathway for eligible candidates supported by a designated PEI employer."
+        }
+      ]
+    },
+    "quebec": {
+      "name": "Quebec Immigration / MIFI",
+      "code": "PSTQ",
+      "jurisdiction": "Quebec",
+      "officialUrl": "https://www.quebec.ca/en/immigration",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Quebec immigration pathways, current program status and application information before deciding which options may apply to you.",
+  "drawUrl": "https://www.quebec.ca/en/immigration/permanent/skilled-workers/skilled-worker-selection-program/invitation/2026",
+  "drawTitle": "PSTQ invitations in Arrima",
+  "drawDescription": "View official Skilled Worker Selection Program invitation criteria and results",
+      "streams": [
+        {
+      "name": "Skilled Worker Selection Program (PSTQ)",
+          "status": "Active",
+      "url": "https://www.quebec.ca/en/immigration/permanent/skilled-workers/skilled-worker-selection-program",
+      "summary": "Québec’s skilled-worker selection program for people who intend to settle permanently in Québec and work.",
+      "substreams": [
+        {
+          "name": "Stream 1: Highly Qualified and Specialized Skills",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/skilled-workers/skilled-worker-selection-program/requirements",
+          "summary": "For eligible workers in FEER 0, 1 or 2 occupations that are not regulated professions."
+        },
+        {
+          "name": "Stream 2: Intermediate and Manual Skills",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/skilled-workers/skilled-worker-selection-program/requirements",
+          "summary": "For eligible workers in FEER 3, 4 or 5 occupations."
+        },
+        {
+          "name": "Stream 3: Regulated Professions",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/skilled-workers/skilled-worker-selection-program/requirements",
+          "summary": "For eligible workers whose intended profession is regulated in Québec."
+        },
+        {
+          "name": "Stream 4: Exceptional Talent",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/skilled-workers/skilled-worker-selection-program/requirements",
+          "summary": "For eligible applicants with recognized exceptional talent or an achievement identified by the Ministère."
+        }
+      ]
+        },
+        {
+      "name": "Québec Experience Program (PEQ)",
+          "status": "Active",
+          "url": "https://www.quebec.ca/immigration/permanente/travailleurs-qualifies/programme-experience-quebecoise",
+      "summary": "A Québec pathway for eligible temporary foreign workers and Québec graduates; consult the official program page for the current intake rules."
+        },
+        {
+          "name": "Business Immigration Programs",
+          "status": "Active",
+      "url": "https://www.quebec.ca/en/immigration/permanent/immigrate-business",
+      "summary": "Permanent-selection pathways for eligible entrepreneurs, investors and self-employed workers.",
+      "substreams": [
+        {
+          "name": "Innovative Business",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/immigrate-business/entrepreneurs/entrepreneur-program-innovative-business",
+          "summary": "For an innovative business or project supported by an accompanying organization."
+        },
+        {
+          "name": "Business Start-up",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/immigrate-business/entrepreneurs/start-acquire-business",
+          "summary": "For applicants starting a business or operating a business already started in Québec."
+        },
+        {
+          "name": "Business Takeover",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/immigrate-business/entrepreneurs/takeover",
+          "summary": "For applicants taking over and operating an existing Québec business with support from an organization."
+        },
+        {
+          "name": "Investor Program",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/immigrate-business/investors",
+          "summary": "For eligible investors who meet Québec’s management, net-worth, investment and French-language requirements."
+        },
+        {
+          "name": "Self-Employed Worker Program",
+          "status": "Active",
+          "url": "https://www.quebec.ca/en/immigration/permanent/immigrate-business/self-employed-workers",
+          "summary": "For eligible self-employed workers who intend to practise their profession in Québec."
+        }
+      ]
+        }
+      ]
+    },
+    "saskatchewan": {
+      "name": "Saskatchewan Immigrant Nominee Program",
+      "code": "SINP",
+      "jurisdiction": "Saskatchewan",
+      "officialUrl": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Saskatchewan immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": null,
+      "drawTitle": "Official immigration draws",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+          "name": "International Skilled Worker",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers",
+      "summary": "For skilled workers outside Saskatchewan or in Canada who meet the requirements of a current SINP sub-category.",
+      "substreams": [
+        {
+          "name": "Employment Offer",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/international-skilled-worker-with-employment-offer",
+          "summary": "For eligible skilled workers with an approved permanent, full-time job offer in Saskatchewan."
+        },
+        {
+          "name": "Agriculture Talent Pathway",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/agriculture-talent-pathway",
+          "summary": "For eligible workers with an SINP-approved job offer in agricultural and related occupations."
+        },
+        {
+          "name": "Health Talent Pathway",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/health-talent-pathway",
+          "summary": "For eligible healthcare workers with an SINP-approved job offer."
+        },
+        {
+          "name": "Innovation and Tech Talent Pathway",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/sinp-innovation-tech-talent-pathway",
+          "summary": "For eligible high-skilled workers with a technology or innovation-sector job offer."
+        },
+        {
+          "name": "Occupation In-Demand",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/international-skilled-worker-occupations-in-demand",
+          "summary": "For eligible skilled workers in an in-demand Saskatchewan occupation who do not have a job offer."
+        },
+        {
+          "name": "Saskatchewan Express Entry",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-international-skilled-workers/international-skilled-worker-saskatchewan-express-entry",
+          "summary": "For eligible skilled workers with a profile in the federal Express Entry pool."
+        }
+      ]
+        },
+        {
+      "name": "Saskatchewan Experience",
+          "status": "Active",
+      "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-with-saskatchewan-experience",
+      "summary": "For eligible foreign nationals who are working and living in Saskatchewan with a valid work permit.",
+      "substreams": [
+        {
+          "name": "Skilled Worker With Existing Work Permit",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-with-saskatchewan-experience/applicants-with-existing-work-permit",
+          "summary": "For eligible workers who have worked in Saskatchewan for at least six months with a valid work permit."
+        },
+        {
+          "name": "Student Category",
+          "status": "Active",
+          "url": "https://www.saskatchewan.ca/residents/moving-to-saskatchewan/live-in-saskatchewan/by-immigrating/saskatchewan-immigrant-nominee-program/browse-sinp-programs/applicants-with-saskatchewan-experience/students",
+          "summary": "For eligible graduates of a recognized Canadian post-secondary institution with a qualifying job offer."
+        }
+      ]
+        },
+        {
+      "name": "Entrepreneur and Farm Pathways",
+          "status": "Deprecated",
+          "url": null,
+      "summary": "Saskatchewan permanently closed all entrepreneur and farm immigration pathways to new applications on March 27, 2025.",
+      "substreams": [
+        {
+          "name": "Entrepreneur Category",
+          "status": "Deprecated",
+          "url": null,
+          "summary": "No new applications, expressions of interest or invitations are accepted."
+        },
+        {
+          "name": "International Graduate Entrepreneur Category",
+          "status": "Deprecated",
+          "url": null,
+          "summary": "No new applications, expressions of interest or invitations are accepted."
+        },
+        {
+          "name": "Farm Owner and Operator",
+          "status": "Deprecated",
+          "url": null,
+          "summary": "No new applications, expressions of interest or invitations are accepted."
+        }
+      ]
+        }
+      ]
+    },
+    "yukon": {
+      "name": "Yukon Nominee Program",
+      "code": "YNP",
+      "jurisdiction": "Yukon",
+      "officialUrl": "https://yukon.ca/en/yukon-nominee-program",
+      "lastVerified": "November 2026",
+      "intro": "Explore official Yukon immigration pathways, current program status and application information before deciding which options may apply to you.",
+      "drawUrl": null,
+      "drawTitle": "Official immigration draws",
+      "drawDescription": "View official invitation rounds and draw information",
+      "streams": [
+        {
+          "name": "Skilled Worker",
+          "status": "Active",
+          "url": "https://yukon.ca/en/immigration/yukon-nominee-program/apply-skilled-worker-and-critical-impact-worker-streams-hire-foreign-worker",
+      "summary": "An employer-driven YNP stream for TEER 0 to 3 positions. The foreign national needs at least 12 months of relevant work experience."
+        },
+        {
+          "name": "Critical Impact Worker",
+          "status": "Active",
+          "url": "https://yukon.ca/en/immigration/yukon-nominee-program/apply-skilled-worker-and-critical-impact-worker-streams-hire-foreign-worker",
+      "summary": "An employer-driven YNP stream for entry-level TEER 4 or 5 positions. The foreign national needs at least 6 months of relevant work experience."
+        },
+        {
+          "name": "Yukon Express Entry",
+          "status": "Active",
+          "url": "https://yukon.ca/en/immigration/yukon-nominee-program/apply-express-entry-stream-hire-foreign-worker",
+      "summary": "An employer-driven stream for eligible candidates in the federal Express Entry pool with a Yukon job offer in a TEER 0 to 3 position."
+        },
+        {
+          "name": "Business Nominee Program",
+      "status": "Active",
+      "url": "https://yukon.ca/en/immigration/yukon-business-nominee-program",
+      "summary": "For eligible foreign entrepreneurs who plan to own and actively manage a business in Yukon."
+        },
+        {
+          "name": "Yukon Community Pilot",
+          "status": "Deprecated",
+          "url": null,
+      "summary": "This temporary work-permit pilot is no longer accepting new applications."
+        }
+      ]
+    }
+  },
+  "order": [
+    "federal",
+    "alberta",
+    "britishColumbia",
+    "manitoba",
+    "newBrunswick",
+    "newfoundlandLabrador",
+    "northwestTerritories",
+    "novaScotia",
+    "ontario",
+    "princeEdwardIsland",
+    "quebec",
+    "saskatchewan",
+    "yukon"
+  ]
+}

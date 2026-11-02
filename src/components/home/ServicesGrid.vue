@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import { services } from '@/config/site.js'
-import BookCtaBand from '@/components/common/BookCtaBand.vue'
 </script>
 
 <template>
@@ -27,8 +26,6 @@ import BookCtaBand from '@/components/common/BookCtaBand.vue'
           <span class="jks-services__more">Learn more →</span>
         </RouterLink>
       </div>
-
-      <BookCtaBand />
     </div>
   </section>
 </template>

@@ -24,6 +24,10 @@ defineProps({
       </li>
 
       <li class="jks-nav__item">
+        <RouterLink to="/programs" class="jks-nav__link">Programs</RouterLink>
+      </li>
+
+      <li class="jks-nav__item">
         <RouterLink to="/about" class="jks-nav__link">About</RouterLink>
       </li>
 

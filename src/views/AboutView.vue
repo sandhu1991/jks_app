@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import PageHero from '@/components/layout/PageHero.vue'
-import BookCtaBand from '@/components/common/BookCtaBand.vue'
 import { about, teamMembers, processSteps } from '@/config/site.js'
 
 const member = teamMembers[0]
@@ -17,6 +16,7 @@ function iconClass(icon) {
       kicker="About JKS Immigration"
       :title="about.missionTitle"
       :lead="about.missionText"
+      :breadcrumbs="[{ label: 'About' }]"
     />
 
     <section class="jks-section jks-about-founder">
@@ -73,8 +73,6 @@ function iconClass(icon) {
         </div>
       </div>
     </section>
-
-    <BookCtaBand standalone />
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
+import Breadcrumbs from '@/components/layout/Breadcrumbs.vue'
 import { faqItems } from '@/config/faq.js'
 
 const openIndex = ref(0)
@@ -22,6 +22,7 @@ function toggle(index) {
   <div class="jks-modern-page">
     <section class="jks-section jks-page-hero">
       <div class="jks-container">
+        <Breadcrumbs :items="[{ label: 'Frequently asked questions' }]" light />
         <p class="jks-kicker">Frequently asked questions</p>
         <h1 class="jks-heading">Questions &amp; answers</h1>
         <p class="jks-lead">
@@ -46,17 +47,6 @@ function toggle(index) {
           <div v-show="openIndex === index" class="jks-faq__answer">
             <p class="jks-faq__answer-text">{{ formatAnswer(item.a) }}</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="jks-section jks-faq-cta">
-      <div class="jks-container jks-faq-cta__inner">
-        <h2 class="jks-heading">Want to ask more questions?</h2>
-        <p class="jks-lead">Book a consultation or send us a message — we respond within one business day.</p>
-        <div class="jks-faq-cta__actions">
-          <RouterLink to="/contact" class="jks-btn jks-btn--navy">Contact us</RouterLink>
-          <RouterLink to="/book" class="jks-btn jks-btn--outline">Book a consultation</RouterLink>
         </div>
       </div>
     </section>

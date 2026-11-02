@@ -49,6 +49,17 @@ const routes = [
         meta: { title: 'Services — JKS Immigration' },
       },
       {
+        path: 'programs',
+        name: 'programs',
+        component: () => import('@/views/ProgramsView.vue'),
+        meta: { title: 'Canadian Immigration Programs — JKS Immigration' },
+      },
+      {
+        path: 'programs/:provider',
+        name: 'program-detail',
+        component: () => import('@/views/ProgramDetailView.vue'),
+      },
+      {
         path: 'immigration',
         name: 'immigration-hub',
         component: () => import('@/views/ServicesView.vue'),

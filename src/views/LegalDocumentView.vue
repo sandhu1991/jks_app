@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import Breadcrumbs from '@/components/layout/Breadcrumbs.vue'
 import termsHtml from '@/content/legal/terms-condition.html?raw'
 import privacyHtml from '@/content/legal/privacy-policy.html?raw'
 import cookieHtml from '@/content/legal/cookie-policy.html?raw'
@@ -21,6 +22,7 @@ const heading = computed(() => route.meta.heading || 'Legal')
   <div class="jks-modern-page">
     <section class="jks-section jks-page-hero">
       <div class="jks-container">
+        <Breadcrumbs :items="[{ label: 'Legal' }, { label: heading }]" light />
         <p class="jks-kicker">Legal</p>
         <h1 class="jks-heading">{{ heading }}</h1>
       </div>

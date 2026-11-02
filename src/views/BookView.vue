@@ -18,6 +18,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
       :kicker="bookPage.kicker"
       :title="bookPage.title"
       :lead="bookPage.lead"
+      :breadcrumbs="[{ label: 'Book a consultation' }]"
     />
 
     <section class="jks-section jks-section--muted">
@@ -96,25 +97,6 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
             </p>
             <p class="jks-book-package__desc">{{ pkg.description }}</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="jks-section jks-section--muted">
-      <div class="jks-container">
-        <div class="jks-book-bottom-cta jks-card jks-book-hover">
-          <p>
-            Not sure which program applies?
-            <strong>{{ site.bookCtaLabel }}</strong> and we will map out your next steps.
-          </p>
-          <a
-            :href="featuredHref"
-            class="jks-btn jks-btn--primary"
-            :target="featuredExternal ? '_blank' : undefined"
-            :rel="featuredExternal ? 'noopener noreferrer' : undefined"
-          >
-            {{ site.bookCtaLabel }}
-          </a>
         </div>
       </div>
     </section>

@@ -1,6 +1,5 @@
 <script setup>
 import PageHero from '@/components/layout/PageHero.vue'
-import BookCtaBand from '@/components/common/BookCtaBand.vue'
 import { site, contactPage, contactChannels, socialLinks } from '@/config/site.js'
 
 function resolveCard(card) {
@@ -28,6 +27,7 @@ const cards = contactChannels.map(resolveCard)
       :kicker="contactPage.kicker"
       :title="contactPage.title"
       :lead="contactPage.lead"
+      :breadcrumbs="[{ label: 'Contact' }]"
     />
 
     <section class="jks-section jks-section--muted">
@@ -84,8 +84,6 @@ const cards = contactChannels.map(resolveCard)
         </div>
       </div>
     </section>
-
-    <BookCtaBand standalone />
   </div>
 </template>
 

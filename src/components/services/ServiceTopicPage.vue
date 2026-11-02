@@ -1,6 +1,5 @@
 <script setup>
-import { RouterLink } from 'vue-router'
-import { site } from '@/config/site.js'
+import PageHero from '@/components/layout/PageHero.vue'
 
 defineProps({
   hub: { type: Object, required: true },
@@ -11,18 +10,16 @@ defineProps({
 
 <template>
   <div class="jks-modern-page">
-    <section class="jks-section jks-service-hero">
-      <div class="jks-container jks-service-hero__inner">
-        <nav class="jks-service-breadcrumb" aria-label="Breadcrumb">
-          <RouterLink :to="hub.path" class="jks-service-breadcrumb__link">{{ hub.label }}</RouterLink>
-          <span class="jks-service-breadcrumb__sep" aria-hidden="true">/</span>
-          <span>{{ title }}</span>
-        </nav>
-        <p class="jks-kicker">{{ hub.kicker }}</p>
-        <h1 class="jks-heading">{{ title }}</h1>
-        <p class="jks-lead">{{ topic.intro }}</p>
+    <PageHero
+      :kicker="hub.kicker"
+      :title="title"
+      :lead="topic.intro"
+      :breadcrumbs="[{ label: hub.label, to: hub.path }, { label: title }]"
+    />
+
+    <section v-if="topic.image" class="jks-section jks-service-topic-image">
+      <div class="jks-container">
         <img
-          v-if="topic.image"
           class="jks-service-hero__image"
           :src="topic.image"
           :alt="topic.imageAlt || title"
@@ -35,7 +32,7 @@ defineProps({
       v-for="(section, index) in topic.sections"
       :key="section.heading"
       class="jks-section"
-      :class="{ 'jks-section--muted': index % 2 === 1 }"
+      :class="{ 'jks-section--muted': index === 0 }"
     >
       <div class="jks-container jks-service-content">
         <h2 class="jks-service-content__heading">{{ section.heading }}</h2>
@@ -64,61 +61,19 @@ defineProps({
         </p>
       </div>
     </section>
-
-    <section class="jks-section jks-section--muted jks-service-cta">
-      <div class="jks-container">
-        <div class="jks-service-cta__inner jks-card">
-          <div>
-            <h2 class="jks-service-cta__title">Ready to discuss your file?</h2>
-            <p class="jks-service-cta__text">
-              {{ site.hours }}<br />
-              {{ site.virtualNote }}
-            </p>
-          </div>
-          <RouterLink to="/book" class="jks-btn jks-btn--primary">{{ site.bookCtaLabel }}</RouterLink>
-        </div>
-      </div>
-    </section>
   </div>
 </template>
 
 <style scoped>
-.jks-service-hero {
-  padding-bottom: 0;
-}
-
-.jks-service-hero__inner .jks-lead {
-  max-width: none;
-}
+.jks-service-topic-image { padding-top: 2.25rem; padding-bottom: 2.25rem; }
 
 .jks-service-hero__image {
   width: 100%;
-  margin-top: 1.75rem;
   max-height: 400px;
   object-fit: cover;
   object-position: center 55%;
   border-radius: var(--jks-radius-lg);
   display: block;
-}
-
-.jks-service-breadcrumb {
-  margin: 0 0 1rem;
-  font-size: 0.88rem;
-  color: var(--jks-muted);
-}
-
-.jks-service-breadcrumb__link {
-  color: var(--jks-brand);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.jks-service-breadcrumb__link:hover {
-  text-decoration: underline;
-}
-
-.jks-service-breadcrumb__sep {
-  margin: 0 0.35rem;
 }
 
 .jks-service-content__heading {

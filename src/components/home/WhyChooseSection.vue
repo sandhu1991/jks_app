@@ -3,7 +3,7 @@ import { whyChoose } from '@/config/site.js'
 </script>
 
 <template>
-  <section class="jks-section jks-section--muted">
+  <section class="jks-section">
     <div class="jks-container">
       <p class="jks-kicker">The JKS difference</p>
       <h2 class="jks-heading">What you can expect from us</h2>

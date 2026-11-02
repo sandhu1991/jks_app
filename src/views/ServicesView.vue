@@ -3,7 +3,7 @@ import { computed, watch, nextTick } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import PageHero from '@/components/layout/PageHero.vue'
 import { serviceCategories } from '@/config/serviceCatalog.js'
-import { site, servicesPage } from '@/config/site.js'
+import { servicesPage } from '@/config/site.js'
 
 const route = useRoute()
 
@@ -44,6 +44,7 @@ function topicSummary(intro) {
       :kicker="hero.kicker"
       :title="hero.title"
       :lead="hero.lead"
+      :breadcrumbs="[{ label: route.meta.servicesHub ? hero.title : 'Services' }]"
     />
 
     <nav class="jks-services-jump" aria-label="Service categories">
@@ -65,7 +66,7 @@ function topicSummary(intro) {
       :id="category.id"
       :key="category.id"
       class="jks-section jks-services-category"
-      :class="{ 'jks-section--muted': index % 2 === 0 }"
+      :class="{ 'jks-section--muted': index % 2 === 1 }"
     >
       <div class="jks-container">
         <header class="jks-services-category__header">
@@ -99,21 +100,6 @@ function topicSummary(intro) {
               <span class="jks-services-topic__more">Learn more →</span>
             </div>
           </RouterLink>
-        </div>
-      </div>
-    </section>
-
-    <section class="jks-section jks-section--muted jks-services-cta">
-      <div class="jks-container">
-        <div class="jks-services-cta__inner jks-card">
-          <div>
-            <h2 class="jks-services-cta__title">Not sure which program applies?</h2>
-            <p class="jks-services-cta__text">
-              {{ site.hours }}<br />
-              {{ site.virtualNote }}
-            </p>
-          </div>
-          <RouterLink to="/book" class="jks-btn jks-btn--primary">{{ site.bookCtaLabel }}</RouterLink>
         </div>
       </div>
     </section>
