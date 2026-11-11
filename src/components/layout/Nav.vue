@@ -5,6 +5,7 @@ defineProps({
   /** White links on black nav bar (desktop header band). */
   dark: { type: Boolean, default: false },
 })
+
 </script>
 
 <template>
@@ -14,7 +15,7 @@ defineProps({
     :class="{ 'jks-nav--dark': dark }"
     aria-label="Main"
   >
-    <ul class="jks-nav__root">
+    <ul id="jks-main-nav-links" class="jks-nav__root">
       <li class="jks-nav__item">
         <RouterLink to="/" class="jks-nav__link">Home</RouterLink>
       </li>
@@ -66,6 +67,7 @@ defineProps({
 }
 
 .jks-nav__link {
+  position: relative;
   color: var(--jks-ink, #1c2836);
   text-decoration: none;
   font-size: 0.88rem;
@@ -95,7 +97,18 @@ defineProps({
 .jks-nav--dark .jks-nav__link:hover,
 .jks-nav--dark .jks-nav__link.router-link-exact-active {
   color: #ffb4b9;
-  background: rgba(255, 255, 255, 0.08);
+  background: transparent;
+}
+
+.jks-nav--dark .jks-nav__link.router-link-exact-active::after {
+  content: '';
+  position: absolute;
+  right: 0.6rem;
+  bottom: 0.08rem;
+  left: 0.6rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--jks-brand);
 }
 
 @media (max-width: 900px) {
@@ -106,45 +119,27 @@ defineProps({
   .jks-nav--dark .jks-nav__link:hover,
   .jks-nav--dark .jks-nav__link.router-link-exact-active {
     color: #ffb4b9;
-    background: rgba(255, 255, 255, 0.08);
+    background: transparent;
   }
 
   .jks-nav {
-    flex: 1;
     width: 100%;
-    height: auto;
-    overflow: visible;
+    padding: 0.5rem 0.2rem;
+    display: flex;
+    justify-content: center;
   }
 
   .jks-nav__root {
     display: flex;
-    position: static;
     width: 100%;
-    height: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0.15rem;
-    padding: 0;
-    overflow-x: visible;
-    background: transparent;
-    box-shadow: none;
-  }
-
-  .jks-nav__root::-webkit-scrollbar {
-    display: none;
-  }
-
-  .jks-nav__item {
-    flex-shrink: 0;
+    flex-wrap: nowrap;
+    gap: 0;
   }
 
   .jks-nav__link {
-    width: auto;
     justify-content: center;
-    padding: 0.45rem 0.55rem;
-    font-size: 0.82rem;
+    padding: 0.38rem 0.4rem;
+    font-size: clamp(0.74rem, 2.8vw, 0.92rem);
     white-space: nowrap;
   }
 }

@@ -128,5 +128,6 @@ import { site } from '@/config/site.js'
     font-size: 0.78rem;
     padding: 0.42rem 0.75rem;
   }
+
 }
 </style>
