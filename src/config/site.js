@@ -26,7 +26,6 @@ export const site = {
   /** Your Cal.com username — e.g. jksimmigration → cal.com/jksimmigration/... */
   calComUsername: 'jks-immigration-2r0l63',
   logo: '/images/jks-logo-header.png',
-  logoSource: '/images/jks-logo-light.png',
   heroImage: '/images/jks-home-hero-canadian-mountains.png',
   clientRating: '5.0',
   facebookUrl: 'https://www.facebook.com/people/JKS-Immigration/61590537196265/',
