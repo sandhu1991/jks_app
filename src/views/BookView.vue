@@ -92,7 +92,9 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
           >
             <h3 class="jks-book-package__title">{{ pkg.title }}</h3>
             <p class="jks-book-package__price">
-              <span class="jks-book-package__amount">{{ pkg.price }}</span>
+              <span class="jks-book-package__amount">
+                {{ pkg.price }}<sup v-if="pkg.priceSuffix" class="jks-book-package__price-suffix">{{ pkg.priceSuffix }}</sup>
+              </span>
               <span v-if="pkg.duration" class="jks-book-package__duration">{{ pkg.duration }}</span>
             </p>
             <p class="jks-book-package__desc">{{ pkg.description }}</p>
@@ -333,6 +335,12 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   font-weight: 700;
   color: var(--jks-brand);
   transition: color 0.25s ease;
+}
+
+.jks-book-package__price-suffix {
+  margin-left: 0.08em;
+  font-size: 0.7em;
+  line-height: 0;
 }
 
 .jks-book-package__duration {

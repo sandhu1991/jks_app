@@ -311,7 +311,7 @@ export const bookPackages = [
   },
   {
     title: 'Full File Review — Initial Assessment',
-    price: '$199',
+    price: '$299',
     duration: '',
     calSlug: 'full-file-review-initial',
     description:
@@ -319,43 +319,63 @@ export const bookPackages = [
   },
   {
     title: 'Full File Review — Post Assessment',
-    price: '$299',
+    price: '$399',
     duration: '',
     calSlug: 'full-file-review-post',
     description:
       'Complete professional review after your initial assessment — forms, documents, cover letters, and checklists before submission.',
   },
   {
+    title: 'Visitor Record',
+    price: '$299',
+    duration: '',
+    calSlug: 'visitor-record',
+    description:
+      'Already in Canada and need more time? Visitor record extension prepared and submitted on your behalf before your status expires.',
+  },
+  {
+    title: 'Super Visa',
+    price: '$999',
+    priceSuffix: '*',
+    duration: '',
+    calSlug: 'super-visa',
+    description:
+      'Super Visa application support for parents and grandparents, including eligibility review, document preparation, and submission guidance.',
+  },
+  {
     title: 'Express Entry Profile Creation',
-    price: '$249',
+    price: '$499',
     duration: '',
     calSlug: 'express-entry-profile',
     description:
       'Accurate Express Entry profile creation in the IRCC portal with CRS factors reviewed to maximize your score. Profile creation only.',
   },
   {
-    title: 'Visitor Record',
-    price: '$499',
-    duration: 'Full service',
-    calSlug: 'visitor-record',
+    title: 'Express Entry',
+    price: '$1,499',
+    priceSuffix: '*',
+    duration: '',
+    calSlug: 'express-entry',
     description:
-      'Already in Canada and need more time? Visitor record extension prepared and submitted on your behalf before your status expires.',
+      'Full Express Entry representation, including eligibility review, profile strategy, document preparation, and permanent-residence application support.',
   },
   {
     title: 'Spousal Sponsorship (Inland & Outland)',
     price: '$1,499',
-    duration: 'Full service',
+    priceSuffix: '*',
+    duration: '',
     calSlug: 'spousal-sponsorship',
     description:
       'Full spousal sponsorship representation for inland or outland cases — eligibility review, document preparation, and submission support.',
   },
   {
     title: 'Provincial Nominee Program (PNP)',
-    price: 'Custom',
-    duration: 'Quote',
+    price: '$1,499',
+    priceSuffix: '*',
+    duration: '',
     calSlug: 'pnp-consultation',
     description:
-      'PNP nomination support tailored to your province and stream. Fee quoted after we review your profile and program fit.',
+      'PNP nomination support tailored to your province and stream, including eligibility review, document preparation, and submission support.',
   },
 ]
 
