@@ -21,13 +21,8 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
       :breadcrumbs="[{ label: 'Book a consultation' }]"
     />
 
-    <section class="jks-section jks-section--muted">
+    <section class="jks-section">
       <div class="jks-container">
-        <div class="jks-book-online jks-card jks-book-hover">
-          <span class="jks-book-online__icon" aria-hidden="true">💻</span>
-          <p class="jks-book-online__text">{{ bookPage.onlineNote }}</p>
-        </div>
-
         <article class="jks-book-featured jks-book-hover jks-book-hover--featured">
           <div class="jks-book-featured__accent" aria-hidden="true" />
 
@@ -66,6 +61,15 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
                 {{ bookFeaturedPackage.bookLabel }}
               </a>
 
+              <div class="jks-book-featured__online-note">
+                <span class="jks-book-featured__online-icon" aria-hidden="true">
+                  <i class="fa-solid fa-laptop" />
+                </span>
+                <p>
+                  <strong>Online appointment</strong>
+                  {{ bookPage.onlineNote }}
+                </p>
+              </div>
               <p class="jks-book-featured__meta">
                 <template v-if="featuredExternal">Secure booking via Cal.com · </template>
                 Appointment required · {{ site.credential }}
@@ -76,10 +80,26 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
       </div>
     </section>
 
+    <section class="jks-section jks-section--muted jks-book-programs-section">
+      <div class="jks-container">
+        <aside class="jks-book-programs-prompt" aria-label="Explore immigration programs">
+          <div>
+            <p class="jks-book-programs-prompt__kicker">Not sure where to begin?</p>
+            <h2>Explore immigration programs first</h2>
+            <p>
+              Review federal, provincial and territorial pathways before choosing the consultation or service that fits your situation.
+            </p>
+          </div>
+          <RouterLink to="/programs" class="jks-book-programs-prompt__link">
+            Explore programs <span aria-hidden="true">→</span>
+          </RouterLink>
+        </aside>
+      </div>
+    </section>
+
     <section class="jks-section">
       <div class="jks-container">
-        <p class="jks-kicker">All services</p>
-        <h2 class="jks-heading">Extended services</h2>
+        <h2 class="jks-heading">Services</h2>
         <p class="jks-lead jks-book-packages__intro">
           Additional services and fees. Book the initial consultation above to discuss which option fits your case.
         </p>
@@ -102,32 +122,14 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
         </div>
       </div>
     </section>
+
   </div>
 </template>
 
 <style scoped>
-.jks-book-online {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.25rem 1.35rem;
-  margin-bottom: 1.5rem;
-  background: #fff;
-}
-
-.jks-book-online__icon {
-  font-size: 1.5rem;
-  line-height: 1;
-  flex-shrink: 0;
-  display: inline-block;
-  transition: transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1);
-}
-
-.jks-book-online__text {
-  margin: 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--jks-ink);
+.jks-modern-page > .jks-section {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .jks-book-featured {
@@ -135,7 +137,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   overflow: hidden;
   border-radius: var(--jks-radius-lg);
   border: 1px solid rgba(185, 28, 28, 0.22);
-  background: linear-gradient(135deg, #fff 0%, #fff9f9 48%, #f8fafc 100%);
+  background: #fff;
   box-shadow:
     0 10px 32px rgba(30, 58, 95, 0.1),
     0 0 0 1px rgba(255, 255, 255, 0.8) inset;
@@ -233,8 +235,8 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  gap: 1rem;
-  padding: 1.35rem;
+  gap: 0.75rem;
+  padding: 1rem;
   border-radius: var(--jks-radius);
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(30, 58, 95, 0.1);
@@ -243,7 +245,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 
 .jks-book-featured__price-card {
   text-align: center;
-  padding: 0.5rem 0 0.25rem;
+  padding: 0.1rem 0;
 }
 
 .jks-book-featured__price-label {
@@ -262,7 +264,7 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 
 .jks-book-featured__amount {
   display: block;
-  font-size: 2.75rem;
+  font-size: 2.4rem;
   font-weight: 700;
   color: var(--jks-brand);
   line-height: 1;
@@ -280,8 +282,8 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 
 .jks-book-featured__btn {
   width: 100%;
-  padding: 0.85rem 1.25rem;
-  font-size: 1rem;
+  padding: 0.72rem 1.1rem;
+  font-size: 0.92rem;
   box-shadow: 0 6px 18px rgba(185, 28, 28, 0.25);
 }
 
@@ -295,6 +297,93 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   color: var(--jks-muted);
   line-height: 1.5;
   text-align: center;
+}
+
+.jks-book-featured__online-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.65rem;
+  border: 1px solid rgba(30, 58, 95, 0.1);
+  border-radius: calc(var(--jks-radius) - 2px);
+  background: #f8fafc;
+}
+
+.jks-book-featured__online-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  border-radius: 50%;
+  background: var(--jks-brand-soft);
+  color: var(--jks-brand);
+  font-size: 0.72rem;
+}
+
+.jks-book-featured__online-note p {
+  margin: 0;
+  color: var(--jks-muted);
+  font-size: 0.73rem;
+  line-height: 1.42;
+}
+
+.jks-book-featured__online-note strong {
+  display: block;
+  margin-bottom: 0.12rem;
+  color: var(--jks-navy);
+  font-size: 0.76rem;
+}
+
+.jks-book-programs-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding: 1.35rem 1.5rem;
+  border: 1px solid rgba(30, 58, 95, 0.12);
+  border-radius: var(--jks-radius);
+  background: #f3f5f7;
+  box-shadow: 0 8px 24px rgba(30, 58, 95, 0.06);
+}
+
+.jks-book-programs-prompt__kicker {
+  margin: 0 0 0.3rem;
+  color: var(--jks-brand);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.jks-book-programs-prompt h2 {
+  margin: 0;
+  color: var(--jks-navy);
+  font-size: 1.18rem;
+  line-height: 1.25;
+}
+
+.jks-book-programs-prompt p:not(.jks-book-programs-prompt__kicker) {
+  max-width: 46rem;
+  margin: 0.35rem 0 0;
+  color: var(--jks-muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.jks-book-programs-prompt__link {
+  flex: 0 0 auto;
+  color: var(--jks-brand);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.jks-book-programs-prompt__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
 }
 
 .jks-book-packages__intro {
@@ -429,10 +518,6 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   transform: translateX(120%);
 }
 
-.jks-book-online:hover .jks-book-online__icon {
-  animation: jks-book-icon-shuffle 0.55s ease;
-}
-
 .jks-book-package:hover .jks-book-package__title {
   color: var(--jks-brand-dark);
 }
@@ -461,29 +546,10 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   transition: color 0.25s ease;
 }
 
-@keyframes jks-book-icon-shuffle {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  20% {
-    transform: scale(1.15) rotate(-8deg) translateX(-2px);
-  }
-  45% {
-    transform: scale(1.1) rotate(6deg) translateX(2px);
-  }
-  70% {
-    transform: scale(1.12) rotate(-4deg);
-  }
-  100% {
-    transform: scale(1.08) rotate(0deg);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .jks-book-hover,
   .jks-book-hover::before,
   .jks-book-hover::after,
-  .jks-book-online__icon,
   .jks-book-featured__amount {
     transition: none;
     animation: none;
@@ -522,6 +588,11 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
 }
 
 @media (max-width: 768px) {
+  .jks-modern-page > .jks-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
   .jks-book-featured__inner {
     grid-template-columns: 1fr;
     gap: 1.35rem;
@@ -531,6 +602,13 @@ const featuredExternal = featuredHref.startsWith('https://cal.com/')
   .jks-book-packages__grid {
     grid-template-columns: 1fr;
   }
+
+  .jks-book-programs-prompt {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
 
   .jks-book-featured__amount {
     font-size: 2.35rem;
