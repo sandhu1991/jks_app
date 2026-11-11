@@ -26,7 +26,9 @@ function next() {
         <div class="jks-reviews__aside">
           <div class="jks-reviews__badge">
             <span class="jks-reviews__rating">{{ site.clientRating }}</span>
-            <span class="jks-reviews__stars" aria-hidden="true">★★★★★</span>
+            <span class="jks-reviews__stars" aria-label="5 out of 5 stars">
+              <i v-for="star in 5" :key="star" class="fa-solid fa-star" aria-hidden="true" />
+            </span>
             <span class="jks-reviews__label">average rating</span>
           </div>
 
@@ -44,7 +46,7 @@ function next() {
 
       <div class="jks-card jks-reviews__panel">
         <blockquote class="jks-reviews__quote">
-          <p>"{{ current.text }}"</p>
+          <p><span class="jks-reviews__quote-mark" aria-hidden="true">“</span>{{ current.text }}”</p>
           <footer class="jks-reviews__footer">
             <cite class="jks-reviews__name">— {{ current.name }}</cite>
             <span v-if="current.case" class="jks-reviews__case">{{ current.case }}</span>
@@ -124,7 +126,10 @@ function next() {
 
 .jks-reviews__stars {
   color: var(--jks-brand);
-  font-size: 0.9rem;
+  display: inline-flex;
+  gap: 0.16rem;
+  font-size: 0.75rem;
+  vertical-align: 0.1rem;
 }
 
 .jks-reviews__label {
@@ -135,7 +140,21 @@ function next() {
 }
 
 .jks-reviews__panel {
-  padding: 1.75rem 1.75rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  padding: 1.75rem 1.75rem 1.35rem;
+  border-top: 3px solid var(--jks-brand);
+}
+
+.jks-reviews__panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 11rem;
+  height: 11rem;
+  background: radial-gradient(circle at top right, rgba(185, 28, 28, 0.07), transparent 68%);
+  pointer-events: none;
 }
 
 .jks-reviews__quote {
@@ -143,10 +162,23 @@ function next() {
 }
 
 .jks-reviews__quote p {
+  position: relative;
   margin: 0 0 1rem;
-  font-size: 1.02rem;
+  max-width: calc(100% - 6.5rem);
+  font-size: 1.08rem;
   line-height: 1.7;
   color: var(--jks-ink);
+}
+
+.jks-reviews__quote-mark {
+  display: inline-block;
+  margin-right: 0.08em;
+  color: var(--jks-brand);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.7em;
+  font-weight: 700;
+  line-height: 0;
+  vertical-align: -0.24em;
 }
 
 .jks-reviews__footer {
@@ -172,13 +204,16 @@ function next() {
 }
 
 .jks-reviews__nav {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.25rem;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 0.5rem;
-  margin-top: 1.25rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--jks-border);
+  margin: 0;
+  padding: 0;
 }
 
 .jks-reviews__btn {
@@ -198,5 +233,21 @@ function next() {
 .jks-reviews__btn:hover {
   background: var(--jks-surface);
   border-color: var(--jks-navy);
+}
+
+@media (max-width: 560px) {
+  .jks-reviews__panel {
+    padding-top: 4.6rem;
+  }
+
+  .jks-reviews__quote p {
+    max-width: none;
+  }
+
+  .jks-reviews__nav {
+    top: 1rem;
+    left: 1.25rem;
+    right: auto;
+  }
 }
 </style>

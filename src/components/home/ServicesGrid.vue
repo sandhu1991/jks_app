@@ -8,7 +8,7 @@ import { services } from '@/config/site.js'
     <div class="jks-container">
       <div class="jks-services__header">
         <p class="jks-kicker">Practice areas</p>
-        <h2 class="jks-heading">Immigration programs we handle</h2>
+        <h2 class="jks-heading">Immigration programs <em>we handle</em></h2>
       </div>
 
       <div class="jks-services__grid jks-stagger">
@@ -33,6 +33,13 @@ import { services } from '@/config/site.js'
 <style scoped>
 .jks-services__header {
   margin-bottom: 2rem;
+}
+
+.jks-services__header .jks-heading em {
+  color: var(--jks-brand);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .jks-services__grid {
@@ -103,6 +110,11 @@ import { services } from '@/config/site.js'
 
 .jks-services__icon {
   margin-bottom: 0.35rem;
+  width: 2.65rem;
+  height: 2.65rem;
+  border: 1px solid #f4d4d4;
+  background: #fff7f7;
+  color: var(--jks-brand);
   transition:
     transform 0.35s cubic-bezier(0.34, 1.4, 0.64, 1),
     background 0.3s ease,
@@ -120,7 +132,8 @@ import { services } from '@/config/site.js'
 .jks-services__title {
   margin: 0;
   font-size: 1.08rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.012em;
   color: var(--jks-ink);
   transition: color 0.25s ease;
 }
@@ -145,7 +158,8 @@ import { services } from '@/config/site.js'
 .jks-services__more {
   margin-top: 0.35rem;
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.015em;
   color: var(--jks-brand);
   display: inline-flex;
   align-items: center;

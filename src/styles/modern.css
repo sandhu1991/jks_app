@@ -28,7 +28,11 @@
 }
 
 .jks-section--muted {
-  background: var(--jks-surface);
+  background-color: var(--jks-surface);
+  background-image:
+    radial-gradient(rgba(30, 58, 95, 0.055) 0.7px, transparent 0.85px),
+    linear-gradient(110deg, rgba(255, 255, 255, 0.48), rgba(238, 242, 247, 0.22));
+  background-size: 8px 8px, 100% 100%;
 }
 
 .jks-section--alt {
@@ -47,11 +51,12 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--jks-navy);
+  color: var(--jks-brand);
 }
 
 .jks-heading {
   margin: 0 0 0.75rem;
+  font-family: 'PT Serif', Georgia, serif;
   font-size: clamp(1.75rem, 3.5vw, 2.35rem);
   font-weight: 700;
   line-height: 1.15;
@@ -249,13 +254,17 @@
 
 /* Inner page hero — matches header Book a Consultation button (navy) */
 .jks-page-hero {
-  background: linear-gradient(180deg, var(--jks-navy) 0%, var(--jks-navy-dark) 100%);
+  background-color: var(--jks-navy-dark);
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.11) 0.65px, transparent 0.8px),
+    linear-gradient(135deg, var(--jks-navy) 0%, var(--jks-navy-dark) 72%);
+  background-size: 7px 7px, 100% 100%;
   color: #fff;
   padding-bottom: clamp(2.25rem, 4.5vw, 3.25rem);
 }
 
 .jks-page-hero .jks-kicker {
-  color: rgba(255, 255, 255, 0.72);
+  color: #ffc1c6;
 }
 
 .jks-page-hero .jks-heading {

@@ -34,9 +34,26 @@ onMounted(() => {
 
 <style scoped>
 .jks-trust {
+  position: relative;
   padding: 1.35rem 1.25rem;
-  background: #e2e8f0;
+  background-color: rgba(221, 229, 239, 0.94);
+  background-image:
+    radial-gradient(rgba(30, 58, 95, 0.08) 0.8px, transparent 0.95px),
+    linear-gradient(100deg, rgba(255, 255, 255, 0.42), rgba(203, 216, 231, 0.3));
+  background-size: 6px 6px, 100% 100%;
   border-bottom: 3px solid var(--jks-brand);
+  box-shadow: 0 -10px 22px rgba(3, 17, 35, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.jks-trust::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--jks-navy), #5a718d 48%, var(--jks-brand));
 }
 
 .jks-trust__grid {
@@ -50,9 +67,11 @@ onMounted(() => {
   display: block;
   font-size: clamp(1.35rem, 2.5vw, 1.85rem);
   font-weight: 700;
-  color: #0f1f33;
+  color: var(--jks-brand);
   line-height: 1.2;
   font-variant-numeric: tabular-nums;
+  transition: color 0.2s ease, transform 0.2s ease;
+  animation: jks-trust-value-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .jks-trust__label {
@@ -63,12 +82,52 @@ onMounted(() => {
   letter-spacing: 0.02em;
   color: #3d4f63;
   text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.jks-trust__item:nth-child(2) .jks-trust__value {
+  animation-delay: 0.08s;
+}
+
+.jks-trust__item:nth-child(3) .jks-trust__value {
+  animation-delay: 0.16s;
+}
+
+.jks-trust__item:nth-child(4) .jks-trust__value {
+  animation-delay: 0.24s;
+}
+
+.jks-trust__item:hover .jks-trust__value {
+  color: var(--jks-brand);
+  transform: translateY(-2px);
+}
+
+.jks-trust__item:hover .jks-trust__label {
+  color: var(--jks-navy);
+}
+
+@keyframes jks-trust-value-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 700px) {
   .jks-trust__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jks-trust__value {
+    animation: none;
+    transition: none;
   }
 }
 </style>

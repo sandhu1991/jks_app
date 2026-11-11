@@ -46,7 +46,7 @@ import { site } from '@/config/site.js'
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center top;
+  background-position: center -34px;
   transform: scale(1.02);
 }
 
@@ -234,7 +234,7 @@ import { site } from '@/config/site.js'
   }
 
   .jks-hero__bg {
-    background-position: 56% top;
+    background-position: 56% -24px;
   }
 
   .jks-hero__overlay {

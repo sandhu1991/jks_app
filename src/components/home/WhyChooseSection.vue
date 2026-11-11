@@ -6,7 +6,7 @@ import { whyChoose } from '@/config/site.js'
   <section class="jks-section">
     <div class="jks-container">
       <p class="jks-kicker">The JKS difference</p>
-      <h2 class="jks-heading">What you can expect from us</h2>
+      <h2 class="jks-heading">What you can <em>expect</em> from us</h2>
       <p class="jks-lead jks-why__intro">
         Immigration rules change often. We stay current so your file is prepared correctly the first
         time — with honest answers when a pathway is not the right fit.
@@ -32,6 +32,13 @@ import { whyChoose } from '@/config/site.js'
   margin-bottom: 2rem;
 }
 
+.jks-heading em {
+  color: var(--jks-brand);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
 .jks-why__list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -46,12 +53,26 @@ import { whyChoose } from '@/config/site.js'
   background: #fff;
   border-radius: var(--jks-radius);
   border: 1px solid var(--jks-border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.jks-why__row:hover {
+  transform: translateY(-3px);
+  border-color: #e6bbbb;
+  box-shadow: 0 10px 22px rgba(30, 58, 95, 0.08);
+}
+
+.jks-why__row :deep(.jks-icon-badge) {
+  flex: 0 0 auto;
+  background: #fff3f3;
+  color: var(--jks-brand);
+  border: 1px solid #f2cccc;
 }
 
 .jks-why__title {
   margin: 0 0 0.35rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--jks-navy);
 }
 
