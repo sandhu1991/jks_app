@@ -46,16 +46,17 @@ import { site } from '@/config/site.js'
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center -34px;
+  background-position: center center;
   transform: scale(1.02);
+  filter: saturate(0.58) brightness(0.9) contrast(0.94);
 }
 
 .jks-hero__overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 42%, rgba(34, 74, 112, 0.32), transparent 42%),
-    linear-gradient(180deg, rgba(5, 18, 34, 0.72) 0%, rgba(8, 29, 50, 0.72) 52%, rgba(5, 18, 34, 0.88) 100%);
+    radial-gradient(circle at 50% 42%, rgba(141, 153, 167, 0.13), transparent 46%),
+    linear-gradient(180deg, rgba(71, 83, 98, 0.48) 0%, rgba(85, 98, 113, 0.43) 52%, rgba(55, 66, 81, 0.62) 100%);
 }
 
 .jks-hero__content {
@@ -234,11 +235,11 @@ import { site } from '@/config/site.js'
   }
 
   .jks-hero__bg {
-    background-position: 56% -24px;
+    background-position: 56% center;
   }
 
   .jks-hero__overlay {
-    background: linear-gradient(180deg, rgba(7, 18, 35, 0.88) 0%, rgba(12, 29, 49, 0.83) 56%, rgba(7, 18, 35, 0.92) 100%);
+    background: linear-gradient(180deg, rgba(54, 65, 79, 0.76) 0%, rgba(73, 86, 101, 0.68) 56%, rgba(45, 55, 68, 0.8) 100%);
   }
 
   .jks-hero__content {

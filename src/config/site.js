@@ -26,7 +26,7 @@ export const site = {
   calComUsername: 'jks-immigration-2r0l63',
   logo: '/images/jks-logo-header.png',
   logoSource: '/images/jks-logo-light.png',
-  heroImage: '/images/jks-home-hero-toronto-skyline.jpg',
+  heroImage: '/images/jks-home-hero-canadian-mountains.png',
   clientRating: '5.0',
   facebookUrl: 'https://www.facebook.com/people/JKS-Immigration/61590537196265/',
   reviewUrl:
