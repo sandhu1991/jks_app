@@ -37,7 +37,7 @@ const footerLinks = [
 
       <div class="footer-copy">
         © {{ year }} {{ site.legalName }}. All Rights Reserved. · Vaudreuil-Dorion, QC, Canada ·
-        jksimmigration.ca
+        jksimmigration.com
       </div>
     </div>
   </footer>

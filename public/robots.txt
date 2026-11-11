@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jksimmigration.ca/sitemap.xml
+Sitemap: https://jksimmigration.com/sitemap.xml

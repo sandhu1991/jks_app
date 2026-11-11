@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const dist = path.join(root, 'dist')
-const siteUrl = 'https://jksimmigration.ca'
+const siteUrl = 'https://jksimmigration.com'
 const imageUrl = `${siteUrl}/images/jks-home-hero-canadian-mountains.png`
 
 const escapeHtml = (value) => String(value)

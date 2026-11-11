@@ -1,5 +1,5 @@
 export const site = {
-  url: 'https://jksimmigration.ca',
+  url: 'https://jksimmigration.com',
   name: 'JKS Immigration',
   legalName: 'JKS Immigration Inc.',
   credential: 'CICC Licensed RCIC',
@@ -31,7 +31,7 @@ export const site = {
   clientRating: '5.0',
   facebookUrl: 'https://www.facebook.com/people/JKS-Immigration/61590537196265/',
   reviewUrl:
-    'https://www.facebook.com/people/JKS-Immigration/61590537196265/reviews',
+    'https://maps.google.com/?q=202-2876%20Rue%20Montcalm,%20Vaudreuil-Dorion,%20QC%20J7V%207W8',
   reviewCtaLabel: 'Write us a review',
 }
 
