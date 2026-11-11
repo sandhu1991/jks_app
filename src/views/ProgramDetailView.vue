@@ -1,5 +1,5 @@
 <script setup>
-import { computed, watchEffect } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import PageHero from '@/components/layout/PageHero.vue'
 import ProgramTreeItem from '@/components/programs/ProgramTreeItem.vue'
@@ -8,9 +8,6 @@ import { federalProgram, publicPrograms } from '@/config/programs.js'
 const route = useRoute()
 const program = computed(() => publicPrograms[route.params.provider] ?? federalProgram)
 
-watchEffect(() => {
-  document.title = `${program.value.name} — JKS Immigration`
-})
 </script>
 
 <template>

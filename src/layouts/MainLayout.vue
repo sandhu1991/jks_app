@@ -3,8 +3,10 @@ import { useRoute } from 'vue-router'
 import Header from '@/components/layout/Header.vue'
 import AppFooter from '@/components/layout/AppFooter.vue'
 import BookCtaBand from '@/components/common/BookCtaBand.vue'
+import { useSeo } from '@/composables/useSeo'
 
 const route = useRoute()
+useSeo(route)
 </script>
 
 <template>

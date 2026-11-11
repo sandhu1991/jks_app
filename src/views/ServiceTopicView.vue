@@ -1,5 +1,5 @@
 <script setup>
-import { computed, watchEffect } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import ServiceTopicPage from '@/components/services/ServiceTopicPage.vue'
 import { serviceLabels } from '@/config/serviceLabels.js'
@@ -18,9 +18,6 @@ const title = computed(() => {
 const hub = computed(() => serviceHubs[category.value] ?? null)
 const topic = computed(() => getServiceTopic(category.value, slug.value))
 
-watchEffect(() => {
-  document.title = `${title.value} — JKS Immigration`
-})
 </script>
 
 <template>

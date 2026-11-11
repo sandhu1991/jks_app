@@ -1,4 +1,5 @@
 export const site = {
+  url: 'https://jksimmigration.ca',
   name: 'JKS Immigration',
   legalName: 'JKS Immigration Inc.',
   credential: 'CICC Licensed RCIC',
